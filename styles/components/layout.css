@@ -1,0 +1,17 @@
+@layer components {
+  .section-stack {
+    @apply space-y-4;
+  }
+
+  .section-header {
+    @apply space-y-1;
+  }
+
+  .blog-expanded {
+    @apply mt-4 border-t border-ink/10 pt-6;
+  }
+
+  .transition-expo {
+    transition-timing-function: var(--ease-out-expo);
+  }
+}

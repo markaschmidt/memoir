@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "@/components/nav-bar";
+import { NavBar } from "@/components/nav";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 const cormorant = Cormorant_Garamond({
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body className="paper-surface min-h-full flex flex-col font-body text-ink">
         <NavBar />
         {children}
+        <Toaster theme="light" position="bottom-center" richColors closeButton />
       </body>
     </html>
   );

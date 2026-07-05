@@ -1,0 +1,17 @@
+@layer components {
+  .badge-base {
+    @apply inline-flex h-6 items-center gap-1.5 rounded-full text-xs font-medium transition-all duration-500;
+  }
+
+  .badge-neutral {
+    @apply bg-ink/8 text-ink;
+  }
+
+  .badge-neutral-muted {
+    @apply bg-ink/8 text-ink-muted;
+  }
+
+  .badge-inverse {
+    @apply bg-ink text-paper-elevated;
+  }
+}

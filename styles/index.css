@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@import "../animations/index.css";
+
+@import "./tokens/theme.css";
+@import "./tokens/motion.css";
+@import "./base/base.css";
+@import "./base/paper-surface.css";
+@import "./components/typography.css";
+@import "./components/surfaces.css";
+@import "./components/badges.css";
+@import "./components/layout.css";
+@import "./components/navigation.css";
+@import "./components/status.css";

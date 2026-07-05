@@ -1,0 +1,39 @@
+.nav-link {
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-out-expo);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  transform: translateX(-50%);
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 1.5rem);
+}
+
+.social-link {
+  transition:
+    color var(--duration-fast) var(--ease-out-expo),
+    background-color var(--duration-fast) var(--ease-out-expo),
+    border-color var(--duration-fast) var(--ease-out-expo),
+    transform var(--duration-fast) var(--ease-out-expo),
+    box-shadow var(--duration-fast) var(--ease-out-expo);
+}
+
+.social-link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-social);
+}
+
+.social-link:active {
+  transform: translateY(0);
+}

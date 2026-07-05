@@ -1,0 +1,10 @@
+@layer components {
+  .status-bar-track {
+    @apply h-2 overflow-hidden rounded-full bg-ink/8;
+  }
+
+  .status-bar-fill {
+    @apply h-full rounded-full;
+    transition: width 0.55s var(--ease-out-expo), background-color 0.55s var(--ease-out-expo);
+  }
+}

@@ -1,0 +1,39 @@
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-nav-enter,
+  .animate-cloud-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .nav-link::after,
+  .social-link {
+    transition: none;
+  }
+
+  .expand-panel {
+    transition: none;
+  }
+
+  .expand-panel-content {
+    transition: none;
+    transform: none;
+  }
+
+  .expand-panel[data-state="closed"] {
+    display: none;
+  }
+
+  .expand-panel[data-state="open"] .expand-panel-content {
+    opacity: 1;
+  }
+
+  .status-bar-fill {
+    transition: none;
+  }
+}

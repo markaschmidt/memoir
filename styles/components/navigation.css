@@ -1,0 +1,9 @@
+@layer components {
+  .button-social {
+    @apply border-ink/12 bg-paper-elevated/60 text-ink/75 hover:border-ink/25 hover:bg-paper-elevated hover:text-ink;
+  }
+
+  .nav-link-active {
+    @apply bg-ink/6 text-ink;
+  }
+}

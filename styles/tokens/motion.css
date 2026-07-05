@@ -1,0 +1,10 @@
+:root {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-cloud: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.35s;
+  --duration-medium: 0.45s;
+  --duration-panel: 0.55s;
+  --duration-reveal: 1.6s;
+  --shadow-soft: 0 24px 60px oklch(0.35 0.03 60 / 0.08);
+  --shadow-social: 0 4px 14px oklch(0.35 0.03 60 / 0.08);
+}
