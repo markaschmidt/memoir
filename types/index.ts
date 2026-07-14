@@ -4,6 +4,11 @@ export type {
   AccoladeProps,
 } from "./accolade";
 export type {
+  Interest,
+  InterestMedia,
+  InterestProjectLink,
+} from "./interest";
+export type {
   ProjectBlogBlock,
   ProjectCollaborator,
   ProjectMilestone,

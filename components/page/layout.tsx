@@ -9,6 +9,8 @@ type PageLayoutProps = {
     src: string;
     alt: string;
   };
+  avatarClassName?: string;
+  headerExtra?: React.ReactNode;
   wide?: boolean;
   children: React.ReactNode;
 };
@@ -17,9 +19,13 @@ export function PageLayout({
   title,
   description,
   avatar,
+  avatarClassName,
+  headerExtra,
   wide,
   children,
 }: PageLayoutProps) {
+  const heroBalanced = avatar && headerExtra;
+
   return (
     <main className="flex-1 py-12 md:py-16">
       <div
@@ -31,15 +37,29 @@ export function PageLayout({
         <FadeIn>
           <div
             className={cn(
-              "grid items-center gap-8",
-              avatar && "md:grid-cols-2 md:gap-10 lg:gap-12"
+              "grid gap-8",
+              avatar && "md:grid-cols-2 md:gap-10 lg:gap-12",
+              heroBalanced ? "md:items-stretch" : avatar && "md:items-center"
             )}
           >
-            <header className="space-y-3 text-center md:text-left">
-              <h1 className="type-display">{title}</h1>
-              {description ? (
-                <p className="type-body mx-auto max-w-md md:mx-0">{description}</p>
-              ) : null}
+            <header
+              className={cn(
+                "text-center md:text-left",
+                heroBalanced
+                  ? "flex h-full flex-col justify-between gap-6"
+                  : "space-y-3"
+              )}
+            >
+              <div className="space-y-3">
+                <h1 className="type-display">{title}</h1>
+                {description ? (
+                  <p className="type-body mx-auto max-w-md md:mx-0">
+                    {description}
+                  </p>
+                ) : null}
+              </div>
+
+              {headerExtra ? <div>{headerExtra}</div> : null}
             </header>
 
             {avatar ? (
@@ -47,7 +67,11 @@ export function PageLayout({
                 src={avatar.src}
                 alt={avatar.alt}
                 priority
-                className="mx-auto w-full md:mx-0"
+                className={cn(
+                  "mx-auto w-full md:mx-0",
+                  heroBalanced && "md:h-full md:min-h-[22rem]",
+                  avatarClassName
+                )}
               />
             ) : null}
           </div>

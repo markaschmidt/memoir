@@ -1,6 +1,6 @@
 @layer components {
   .badge-base {
-    @apply inline-flex h-6 items-center gap-1.5 rounded-full text-xs font-medium transition-all duration-500;
+    @apply inline-flex h-7 items-center gap-1.5 rounded-full px-3 text-sm font-medium transition-all duration-500;
   }
 
   .badge-neutral {

@@ -4,6 +4,7 @@ export * from "./blurb";
 export * from "./book";
 export * from "./content";
 export * from "./credential";
+export * from "./interest";
 export * from "./investment";
 export * from "./literature";
 export * from "./nav";

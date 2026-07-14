@@ -14,6 +14,7 @@ export const MARK_DISCORD = "ardenid";
 
 export const projects: ProjectProps[] = [
   {
+    slug: "triumni",
     title: "Triumni",
     description:
       "A smarter computing paradigm built on balanced ternary computing. The goal is to demonstrably prove that between a primitive binary-based computer and a primitive ternary computer (both built by me), ternary systems have a superior advantage and can help circumvent the limitations of Moore's law.",
@@ -83,6 +84,7 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
+    slug: "podkaster",
     title: "Podkaster",
     description:
       "Agentic software for an informative media content pipeline. It ingests arXiv articles, transforms them into engaging written pieces and podcasts, and automatically publishes to Spotify, TikTok, and YouTube.",
@@ -141,6 +143,7 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
+    slug: "reef-media-browser-extension",
     title: "Reef Media Browser Extension",
     description:
       "A browser extension that brings Reef Media's misinformation analysis directly into the user's browsing flow, helping people evaluate media credibility without leaving the page they are reading.",
@@ -198,6 +201,7 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
+    slug: "agentic-anthropology",
     title: "Agentic Anthropology",
     description:
       "Winner of the Betaworks hackathon, built solo in a matter of hours. A multi-user dungeon in Tribute Labs's Intent Spaces where several AI agents play a D&D-style campaign guided by a gamemaster agent. — autonomous historical factions, world events, and intent-space-native orchestration via Spacebase.",
@@ -269,6 +273,7 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
+    slug: "artie-agent",
     title: "Artie Agent",
     description:
       "An agentic remote trade platform designed to help retail investors bridge the competitive gap with institutional finance through mobile-first portfolio management and intelligent automation.",
@@ -320,6 +325,10 @@ export const projects: ProjectProps[] = [
     ],
   },
 ];
+
+export const projectsBySlug = Object.fromEntries(
+  projects.map((project) => [project.slug, project])
+) as Record<string, ProjectProps>;
 
 export const ventures: VentureProps[] = [
   {

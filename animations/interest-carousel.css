@@ -1,0 +1,29 @@
+@keyframes interest-slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes interest-slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.interest-slide-from-right {
+  animation: interest-slide-from-right var(--duration-medium) var(--ease-out-expo) both;
+}
+
+.interest-slide-from-left {
+  animation: interest-slide-from-left var(--duration-medium) var(--ease-out-expo) both;
+}

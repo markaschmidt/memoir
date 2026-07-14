@@ -36,4 +36,9 @@
   .status-bar-fill {
     transition: none;
   }
+
+  .interest-slide-from-right,
+  .interest-slide-from-left {
+    animation: none;
+  }
 }

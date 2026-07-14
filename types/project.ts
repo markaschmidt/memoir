@@ -32,6 +32,7 @@ export type ProjectTech = {
 };
 
 export type ProjectProps = {
+  slug: string;
   title: string;
   description: string;
   githubUrl: string;

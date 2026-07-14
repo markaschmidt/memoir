@@ -18,7 +18,7 @@ export function AvatarHero({
     <div
       className={cn(
         "surface-avatar",
-        "h-[clamp(14rem,42vh,26rem)] sm:h-[clamp(16rem,45vh,28rem)]",
+        "h-[clamp(16rem,45vh,30rem)] sm:h-[clamp(18rem,48vh,32rem)]",
         className
       )}
     >

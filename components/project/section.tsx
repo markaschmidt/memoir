@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FadeIn } from "@/animations/fade-in";
 import { ProjectCard } from "./card";
 import {
@@ -60,6 +60,18 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
     return next;
   }, [projects, sortDirection, sortKey]);
 
+  useEffect(() => {
+    function scrollToHash() {
+      const id = window.location.hash.slice(1);
+      if (!id) return;
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
+  }, [sortedProjects]);
+
   function handleSort(key: ProjectSortKey) {
     if (sortKey === key) {
       setSortDirection((current) => (current === "asc" ? "desc" : "asc"));
@@ -88,7 +100,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
       </div>
 
       {sortedProjects.map((project, index) => (
-        <FadeIn key={project.title} delay={180 + index * 140}>
+        <FadeIn key={project.slug} delay={180 + index * 140}>
           <ProjectCard {...project} />
         </FadeIn>
       ))}

@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: "images-na.ssl-images-amazon.com",
         pathname: "/images/P/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };

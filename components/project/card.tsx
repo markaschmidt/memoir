@@ -27,6 +27,7 @@ import { formatProjectDateRange } from "@/lib/project-dates";
 import { cn } from "@/lib/utils";
 
 export function ProjectCard({
+  slug,
   title,
   description,
   githubUrl,
@@ -45,7 +46,10 @@ export function ProjectCard({
   const hasBlog = Boolean(blog?.length);
 
   return (
-    <Card className={cn("surface-card overflow-hidden", className)}>
+    <Card
+      id={slug}
+      className={cn("surface-card scroll-mt-28 overflow-hidden", className)}
+    >
       <CardHeader className="gap-4">
         <div className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 items-start gap-4">

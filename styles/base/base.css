@@ -2,10 +2,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-size: 112.5%;
+    @apply font-body;
+  }
   body {
     @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-body;
   }
 }

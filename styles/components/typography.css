@@ -1,62 +1,62 @@
 @layer components {
   .type-display {
-    @apply font-serif text-4xl font-medium tracking-tight text-ink md:text-5xl;
+    @apply font-serif text-5xl font-medium tracking-tight text-ink md:text-6xl;
   }
 
   .type-section-title {
-    @apply font-serif text-2xl font-medium tracking-tight text-ink;
+    @apply font-serif text-3xl font-medium tracking-tight text-ink;
   }
 
   .type-card-title {
-    @apply font-serif text-xl font-medium text-ink;
+    @apply font-serif text-2xl font-medium text-ink;
   }
 
   .type-card-title-sm {
-    @apply font-serif text-lg font-medium text-ink;
+    @apply font-serif text-xl font-medium text-ink;
   }
 
   .type-body {
-    @apply font-serif text-base leading-relaxed text-ink-muted;
+    @apply font-serif text-lg leading-relaxed text-ink-muted;
   }
 
   .type-section-desc {
-    @apply font-serif text-sm leading-relaxed text-ink-muted;
+    @apply font-serif text-base leading-relaxed text-ink-muted;
   }
 
   .type-caption {
-    @apply font-serif text-sm text-ink-muted;
+    @apply font-serif text-base text-ink-muted;
   }
 
   .type-caption-muted {
-    @apply font-serif text-xs text-ink-muted/80;
+    @apply font-serif text-sm text-ink-muted/80;
   }
 
   .type-eyebrow {
-    @apply font-serif text-xs uppercase tracking-[0.18em] text-ink-muted/80;
+    @apply font-serif text-sm uppercase tracking-[0.18em] text-ink-muted/80;
   }
 
   .type-nav-label {
-    @apply font-serif text-[0.65rem] font-medium uppercase tracking-[0.22em] text-ink-muted/80;
+    @apply font-serif text-xs font-medium uppercase tracking-[0.22em] text-ink-muted/80;
   }
 
   .type-brand {
-    @apply font-serif text-2xl font-medium tracking-tight text-ink transition-colors duration-300 hover:text-ink-muted;
+    @apply font-serif text-3xl font-medium tracking-tight text-ink transition-colors duration-300 hover:text-ink-muted;
   }
 
   .type-table-emphasis {
-    @apply font-serif font-medium text-ink;
+    @apply font-serif text-base font-medium text-ink;
   }
 
   .type-table-cell {
-    @apply font-serif text-sm text-ink-muted;
+    @apply font-serif text-base text-ink-muted;
   }
 
   .type-table-body {
-    @apply font-serif text-sm leading-relaxed text-ink-muted;
+    @apply font-serif text-base leading-relaxed text-ink-muted;
   }
 
   .type-sort-header {
-    @apply cursor-pointer font-serif text-left text-sm font-medium text-ink-muted transition-colors hover:text-ink;
+    @apply cursor-pointer font-serif text-left text-base font-medium text-ink-muted transition-colors hover:text-ink;
   }
 
   .type-sort-header-active {
@@ -64,7 +64,7 @@
   }
 
   .type-action {
-    @apply font-serif text-sm text-ink/75 transition-colors duration-300 hover:text-ink;
+    @apply font-serif text-base text-ink/75 transition-colors duration-300 hover:text-ink;
   }
 
   .link-subtle {
@@ -80,14 +80,14 @@
   }
 
   .type-nav-link {
-    @apply font-serif text-[0.95rem] font-normal tracking-wide text-ink/85;
+    @apply font-serif text-lg font-normal tracking-wide text-ink/85;
   }
 
   .type-fallback-label {
-    @apply font-serif text-[0.55rem] leading-tight text-ink-muted;
+    @apply font-serif text-xs leading-tight text-ink-muted;
   }
 
   .type-label {
-    @apply font-serif text-sm text-ink;
+    @apply font-serif text-base text-ink;
   }
 }
