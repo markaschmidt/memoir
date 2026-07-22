@@ -9,6 +9,7 @@ export type {
   InterestProjectLink,
 } from "./interest";
 export type {
+  MilestoneStatus,
   ProjectBlogBlock,
   ProjectCollaborator,
   ProjectMilestone,

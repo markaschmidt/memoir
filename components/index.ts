@@ -7,6 +7,7 @@ export * from "./credential";
 export * from "./interest";
 export * from "./investment";
 export * from "./literature";
+export * from "./game-development";
 export * from "./nav";
 export * from "./page";
 export * from "./project";

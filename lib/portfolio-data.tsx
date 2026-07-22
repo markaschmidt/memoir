@@ -4,6 +4,7 @@ import type { VentureProps } from "@/types/venture";
 import {
   artieLogo,
   podkasterLogo,
+  reefTerminalLogo,
   triumniLogo,
   vektreLogo,
 } from "@/lib/project-logos";
@@ -17,35 +18,83 @@ export const projects: ProjectProps[] = [
     slug: "triumni",
     title: "Triumni",
     description:
-      "A smarter computing paradigm built on balanced ternary computing. The goal is to demonstrably prove that between a primitive binary-based computer and a primitive ternary computer (both built by me), ternary systems have a superior advantage and can help circumvent the limitations of Moore's law.",
-    githubUrl: "https://github.com/markaschmidt/triumni",
+      "A research project investigating balanced-ternary computing through matched binary and ternary architectures. Triumni progresses from emulation and binary-hosted prototypes to a minimal kernel and a genuinely three-state primitive computer, with reproducible experiments used to evaluate where ternary computing provides measurable advantages.",
+    githubUrl: "https://github.com/markaschmidt/trinary",
     logo: triumniLogo,
     startDate: "2026-09-15",
     status: {
       milestones: [
         {
-          label: "Binary prototype design",
-          completed: true,
+          label: "Binary reference-machine design",
+          status: "completed",
           details:
-            "Schematic and breadboard layout for the primitive binary reference machine are defined.",
+            "Schematic, architecture, and breadboard design for a primitive binary comparison machine.",
         },
         {
           label: "Balanced-ternary logic core",
-          completed: true,
+          status: "completed",
           details:
-            "Basic ternary gates and signal-level experiments validate the three-valued foundation.",
+            "Validated ternary values, arithmetic, logic gates, conversions, and foundational three-valued operations.",
         },
         {
-          label: "Ternary prototype assembly",
-          completed: false,
+          label: "Ternary ISA and Rust emulator",
+          status: "in-progress",
           details:
-            "The matching ternary machine still needs full assembly before side-by-side testing can begin.",
+            "Instruction set, CPU state, memory model, and Rust emulator for running ternary programs.",
         },
         {
-          label: "Benchmark suite",
-          completed: false,
+          label: "Prototype device design",
+          status: "pending",
           details:
-            "Comparable workloads and measurement harness are not yet wired across both machines.",
+            "Schematics, BOM, and board layout for breadboard or FPGA prototype hardware to host the emulator.",
+        },
+        {
+          label: "Prototype device assembly",
+          status: "pending",
+          details:
+            "Physical assembly of prototype boards, wiring, and basic I/O so the emulator can run on real hardware.",
+        },
+        {
+          label: "Emulator bring-up on prototype hardware",
+          status: "pending",
+          details:
+            "Flash, boot, and validate the ternary emulator on prototype devices with test programs and debug interfaces.",
+        },
+        {
+          label: "Development toolchain and binary baseline",
+          status: "pending",
+          details:
+            "Assembler, debugger, monitor, executable format, and matched binary emulator for side-by-side testing.",
+        },
+        {
+          label: "Experiments and automated results platform",
+          status: "pending",
+          details:
+            "Benchmark phases, automated testing, reproducible datasets, and a dashboard for tables, graphs, and run history.",
+        },
+        {
+          label: "Binary-hosted ternary devices",
+          status: "pending",
+          details:
+            "Binary-hosted emulator and FPGA softcore—intermediary devices that remain physically binary while running or implementing ternary logic.",
+        },
+        {
+          label: "Bootloader and minimal kernel",
+          status: "pending",
+          details:
+            "Bootloader, monitor, syscalls, memory management, task execution, console I/O, and binary-peripheral drivers.",
+        },
+        {
+          label: "Physical ternary processor prototype",
+          status: "pending",
+          details:
+            "True three-level circuits, ternary ALU, and a small programmable processor, with matched physical experiments on cost, cycles, energy, and complexity.",
+        },
+        {
+          label: "Results publication",
+          status: "pending",
+          details:
+            "Source code, schematics, ISA docs, methodology, datasets, articles, videos, and formal research findings.",
         },
       ],
     },
@@ -58,7 +107,7 @@ export const projects: ProjectProps[] = [
       {
         type: "paragraph",
         content:
-          "Triumni is an experimental hardware and architecture project comparing primitive binary and balanced-ternary machines built from the ground up. The long-term goal is a side-by-side benchmark that makes the theoretical advantages of ternary logic tangible in practice.",
+          "A research project investigating balanced-ternary computing through matched binary and ternary architectures. Triumni progresses from emulation and binary-hosted prototypes to a minimal kernel and a genuinely three-state primitive computer, with reproducible experiments used to evaluate where ternary computing provides measurable advantages.",
       },
     ],
     techStack: [
@@ -95,25 +144,25 @@ export const projects: ProjectProps[] = [
       milestones: [
         {
           label: "Desktop shell",
-          completed: true,
+          status: "completed",
           details:
             "Tauri 2 app scaffold, local workflow UI, and project structure are in place.",
         },
         {
           label: "arXiv ingestion pipeline",
-          completed: true,
+          status: "completed",
           details:
             "Paper fetching, parsing, and agent prompts for article generation are working end to end.",
         },
         {
           label: "Audio generation",
-          completed: false,
+          status: "pending",
           details:
             "Podcast voice synthesis and episode packaging still need tighter quality control.",
         },
         {
           label: "Multi-platform publishing",
-          completed: false,
+          status: "pending",
           details:
             "Automated posting to Spotify, TikTok, and YouTube is partially implemented but not fully reliable.",
         },
@@ -154,27 +203,21 @@ export const projects: ProjectProps[] = [
       milestones: [
         {
           label: "Extension scaffold",
-          completed: true,
+          status: "completed",
           details:
             "Manifest, content-script injection, and popup shell are implemented.",
         },
         {
           label: "Inline analysis UI",
-          completed: true,
+          status: "completed",
           details:
             "Users can trigger Reef Media checks from the active page without switching tabs.",
         },
         {
           label: "Reef API integration",
-          completed: false,
+          status: "completed",
           details:
-            "Production auth, rate limits, and response caching still need hardening.",
-        },
-        {
-          label: "Store release",
-          completed: false,
-          details:
-            "Packaging, permissions review, and browser-store submission remain open.",
+            "Production auth, rate limits, and response caching are wired into the extension.",
         },
       ],
     },
@@ -201,6 +244,74 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
+    slug: "reef-terminal",
+    title: "Reef Terminal",
+    description:
+      "First-place Hack in Paradise project built solo in Miami. An enterprise platform for affordably managing misinformation mitigation — case triage, bad-actor investigation, and AI-assisted enforcement — designed to pair with Reef Media's consumer-facing media analyzer.",
+    githubUrl: "https://github.com/markaschmidt/Reef-Terminal",
+    logo: reefTerminalLogo,
+    startDate: "2026-02-01",
+    endDate: "2026-02-01",
+    status: {
+      milestones: [
+        {
+          label: "Hack in Paradise demo",
+          status: "completed",
+          details:
+            "Built solo at Hack in Paradise in Miami and won first place against 18 teams, most with 2–4 members.",
+        },
+        {
+          label: "Trust & Safety operations dashboard",
+          status: "completed",
+          details:
+            "Live panel for triaging flagged content, investigating bad actors, and applying graduated enforcement policies.",
+        },
+        {
+          label: "AI-assisted case triage",
+          status: "completed",
+          details:
+            "Gemini-powered recommendations with policy actions, rationales, confidence scores, and escalation paths for analysts.",
+        },
+      ],
+    },
+    skills: [
+      { name: "Trust & Safety operations", category: "Trust & Safety" },
+      { name: "Enterprise SaaS", category: "Product" },
+      { name: "AI-assisted enforcement", category: "Agents" },
+      { name: "Rapid hackathon prototyping", category: "Product" },
+    ],
+    blog: [
+      {
+        type: "paragraph",
+        content:
+          "Reef Terminal is the enterprise counterpart to Reef Media's consumer media analyzer. Trust & Safety teams use it to investigate flagged misinformation, assess bad-actor threat profiles, and apply graduated enforcement — from content advisories and fact-check labels through reach reduction, monetisation suspension, and bans.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Built at Hack in Paradise in Miami, the project won first place while competing solo against 18 teams, most with two to four members. The live dashboard at panel.reefmedia.ai combines case triage, actor investigation, analytics, and Gemini-driven triage recommendations in a single workspace.",
+      },
+    ],
+    techStack: [
+      { name: "Jaclang", category: "Backend", notes: "Walker API and auth" },
+      { name: "React", category: "Frontend", notes: "Trust & Safety dashboard" },
+      { name: "TypeScript", category: "Language", notes: "Shared client logic" },
+      { name: "Google Cloud Firestore", category: "Database", notes: "Cases and actor data" },
+      { name: "Google Gemini", category: "AI", notes: "Case triage and assessments" },
+      { name: "Docker", category: "DevOps", notes: "Containerised deployment" },
+    ],
+    tags: [
+      {
+        label: "Hackathon Winner",
+        tag: true,
+        color: "bg-amber-100/80 text-amber-950",
+        icon: <TrophyIcon className="size-3.5" />,
+      },
+      { label: "Trust & Safety", tag: true, color: "bg-teal-100/80 text-teal-950" },
+      { label: "AI x Digital Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
+    ],
+  },
+  {
     slug: "agentic-anthropology",
     title: "Agentic Anthropology",
     description:
@@ -213,27 +324,21 @@ export const projects: ProjectProps[] = [
       milestones: [
         {
           label: "Hackathon demo",
-          completed: true,
+          status: "completed",
           details:
             "Built solo and won the Betaworks Intent Space hackathon with a live playable simulation.",
         },
         {
           label: "Faction agent loop",
-          completed: true,
+          status: "completed",
           details:
             "Autonomous civilization agents post moves, react to events, and update world state.",
         },
         {
           label: "Gamemaster dilemmas",
-          completed: true,
+          status: "completed",
           details:
             "A gamemaster agent introduces D&D-style dilemmas and adjudicates faction responses.",
-        },
-        {
-          label: "Public deployment",
-          completed: false,
-          details:
-            "The project runs locally; hosted demo infrastructure has not been prioritized yet.",
         },
       ],
     },
@@ -284,25 +389,25 @@ export const projects: ProjectProps[] = [
       milestones: [
         {
           label: "Mobile-first UI",
-          completed: true,
+          status: "completed",
           details:
             "Core portfolio views and responsive Next.js app shell are implemented.",
         },
         {
           label: "Agentic API layer",
-          completed: true,
+          status: "completed",
           details:
             "FastAPI services handle portfolio data flows and agent orchestration.",
         },
         {
           label: "Trade automation",
-          completed: false,
+          status: "pending",
           details:
             "Brokerage integrations and execution guardrails are still being expanded.",
         },
         {
           label: "Production rollout",
-          completed: false,
+          status: "in-progress",
           details:
             "Observability, compliance review, and broader user onboarding remain in progress.",
         },
@@ -332,30 +437,40 @@ export const projectsBySlug = Object.fromEntries(
 
 export const ventures: VentureProps[] = [
   {
+    slug: "reef-media",
     name: "Reef Media",
     description:
       "A media venture providing affordable misinformation mitigation to social media platforms to significantly reduce the <$8B in trust and safety costs by automating monotonous case work and fostering healthier platform experiences by empowering users to understand the value of any media with analysis tools.",
     websiteUrl: "https://app.reefmedia.ai",
     logo: "/ventures/reef_media_svg.webp",
     category: "Digital Trust & Safety",
+    period: "Oct. 2024 — May 2026",
+    status: "past",
     tags: [
       { label: "Media Analysis", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-      { label: "Turst & Safety Automation", tag: true, color: "bg-teal-100/80 text-teal-950" },
+      { label: "Trust & Safety Automation", tag: true, color: "bg-teal-100/80 text-teal-950" },
     ],
   },
   {
+    slug: "vektre",
     name: "Vektre",
     description:
       "An agentic asset generation platform for 3d game development that slashes game asset development timelines and costs by 80-90% for indie game studios. What started initially as a hackathon project, has evolved into a full-fledged B2B-SaaS venture.",
     websiteUrl: "https://demo.artieagent.tech",
     logo: vektreLogo,
     category: "AI for 3D Game Development",
+    period: "June 2026 — present",
+    status: "current",
     tags: [
       { label: "Game Dev", tag: true, color: "bg-indigo-100/80 text-indigo-950" },
       { label: "Synthesis", tag: true, color: "bg-violet-100/80 text-violet-950" },
     ],
   },
 ];
+
+export const venturesBySlug = Object.fromEntries(
+  ventures.map((venture) => [venture.slug, venture]),
+) as Record<string, VentureProps>;
 
 export const accolades: AccoladeProps[] = [
   {
@@ -426,6 +541,18 @@ export const accolades: AccoladeProps[] = [
         label: "Case Study",
         href: "https://enterprise.wikimedia.com/blog/reef-media-ai/",
       },
+    ],
+  },
+  {
+    iconSrc: "/ventures/reef_media_svg.webp",
+    name: "Reef Media Discord Integrated App Launch",
+    description:
+      "Launched Reef Media as a Discord integrated app across 15 communities with a collective ~26K members and ~300 individual users actively using the product.",
+    location: "Discord",
+    year: 2025,
+    tags: [
+      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
+      { label: "Product Launch", tag: true, color: "bg-teal-100/80 text-teal-950" },
     ],
   },
 ];

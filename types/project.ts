@@ -5,9 +5,11 @@ export type ProjectBlogBlock =
   | { type: "paragraph"; content: string }
   | { type: "youtube"; videoId: string; title?: string };
 
+export type MilestoneStatus = "completed" | "in-progress" | "pending";
+
 export type ProjectMilestone = {
   label: string;
-  completed: boolean;
+  status: MilestoneStatus;
   details: string;
 };
 

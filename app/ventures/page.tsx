@@ -17,7 +17,7 @@ export default function VenturesPage() {
     >
       <div className="grid gap-6 md:grid-cols-2">
         {ventures.map((venture, index) => (
-          <FadeIn key={venture.name} delay={180 + index * 140}>
+          <FadeIn key={venture.slug} delay={180 + index * 140}>
             <VentureCard {...venture} />
           </FadeIn>
         ))}

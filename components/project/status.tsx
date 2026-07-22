@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ExpandablePanel } from "@/animations/expandable-panel";
 import { ProjectSkillsTable } from "./skills-table";
-import type { ProjectSkill, ProjectStatus } from "@/types/project";
+import type { MilestoneStatus, ProjectSkill, ProjectStatus } from "@/types/project";
 import { getProjectProgressPercent } from "@/lib/project-progress";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +12,24 @@ function completionColor(percent: number) {
   const hue = 27 + (145 - 27) * (clamped / 100);
   return `oklch(0.58 0.19 ${hue})`;
 }
+
+const MILESTONE_STATUS_CLASS: Record<MilestoneStatus, string> = {
+  completed: "milestone-status-completed",
+  "in-progress": "milestone-status-in-progress",
+  pending: "milestone-status-pending",
+};
+
+const MILESTONE_STATUS_ICON: Record<MilestoneStatus, string> = {
+  completed: "✓",
+  "in-progress": "◔",
+  pending: "○",
+};
+
+const MILESTONE_STATUS_LABEL: Record<MilestoneStatus, string> = {
+  completed: "Completed",
+  "in-progress": "In progress",
+  pending: "Pending",
+};
 
 type ProjectStatusBarProps = {
   status: ProjectStatus;
@@ -57,23 +75,26 @@ export function ProjectStatusBar({ status, skills }: ProjectStatusBarProps) {
 
       <ExpandablePanel open={detailsOpen}>
         <div className="space-y-6 pt-2">
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {status.milestones.map((milestone) => (
               <li key={milestone.label} className="flex items-start gap-3">
                 <span
                   className={cn(
                     "mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full text-[0.65rem] font-semibold",
-                    milestone.completed
-                      ? "bg-emerald-100/90 text-emerald-950"
-                      : "bg-rose-100/90 text-rose-950"
+                    MILESTONE_STATUS_CLASS[milestone.status]
                   )}
                   aria-hidden="true"
                 >
-                  {milestone.completed ? "✓" : "○"}
+                  {MILESTONE_STATUS_ICON[milestone.status]}
                 </span>
-                <div className="min-w-0 flex-1 space-y-1">
-                  <p className="type-label">{milestone.label}</p>
-                  <p className="type-table-body">{milestone.details}</p>
+                <div className="min-w-0 flex-1 space-y-0.5">
+                  <p className="type-label truncate">{milestone.label}</p>
+                  <p className="type-table-body line-clamp-2 text-pretty">
+                    {milestone.details}
+                  </p>
+                  <span className="sr-only">
+                    {MILESTONE_STATUS_LABEL[milestone.status]}
+                  </span>
                 </div>
               </li>
             ))}

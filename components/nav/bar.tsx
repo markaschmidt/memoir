@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { ProjectsNavMenu } from "@/components/nav/projects-menu";
 import {
   DiscordIcon,
   EmailIcon,
@@ -16,7 +17,6 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
   { label: "Ventures", href: "/ventures" },
   { label: "Accolades", href: "/accolades" },
   { label: "Literature", href: "/literature" },
@@ -99,8 +99,9 @@ export function NavBar() {
           <NavSection title="Navigation">
             <nav
               aria-label="Primary"
-              className="flex flex-wrap gap-0.5 sm:gap-1"
+              className="flex flex-wrap items-center gap-0.5 sm:gap-1"
             >
+              <ProjectsNavMenu />
               {NAV_LINKS.map((link) => (
                 <Button
                   key={link.href}
