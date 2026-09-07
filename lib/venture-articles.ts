@@ -13,7 +13,7 @@ export const ventureArticles: VentureArticle[] = [
   {
     slug: "reef-media",
     subtitle:
-      "An AI-powered media analysis platform that transformed long-form video and news into structured, verifiable intelligence.",
+      "An AI-powered media analysis platform that empowers users to understand the value of any media, prior to viewing it.",
     blocks: [
       {
         type: "heading",
@@ -22,12 +22,17 @@ export const ventureArticles: VentureArticle[] = [
       {
         type: "paragraph",
         content:
-          "Reef Media started from a simple frustration: the internet produces more media than any person can process, but almost none of the tools to understand it treat analysis as a first-class product. Summaries exist everywhere. Structured judgment — with sources, logic checks, and a record of what was actually said — does not.",
+          "Reef Media's inception began after the shocking realization that over 800 people had died from supposed COVID-19 cures that they found on social media. The idea that people could cause their own deaths from reading the wrong information was a repulsive and disappointing thought.",
       },
       {
         type: "paragraph",
         content:
-          "Reef Media was my answer. A platform where you could drop in a YouTube link or article, receive a structured breakdown of what was claimed, and evaluate it against research, reasoning, and community verdict. It was built for people who needed to move fast without sacrificing rigor.",
+          "A platform where you could drop in a YouTube video, Tiktok, article, or any other social media content, and receive a structured breakdown of what was claimed, and evaluate it against research, reasoning, and community verdict. It was built to bridge the digital literacy gap seamlessly to move fast without sacrificing rigor.",
+      },
+      {
+        type: "video",
+        src: "https://youtu.be/8tbxIkaKMTw",
+        title: "Reef Media product walkthrough",
       },
       {
         type: "heading",
@@ -36,7 +41,7 @@ export const ventureArticles: VentureArticle[] = [
       {
         type: "paragraph",
         content:
-          "At its core, Reef Media was a media intelligence workspace. Users analyzed content through a unified dashboard — browsing past reports, searching history, and launching new analyses from a single interface. Every session produced a persistent record you could return to, share, or build on.",
+          "At its core, Reef Media was a media intelligence workspace. Users analyzed content through a unified toolset. Every session produced a persistent record you could return to, share, or build on.",
       },
       {
         type: "image",
@@ -51,14 +56,14 @@ export const ventureArticles: VentureArticle[] = [
       {
         type: "paragraph",
         content:
-          "For video content, Reef Media generated a full analytical response: a summary of claims, distilled key points, supplemental context about the speaker, and an interactive verdict layer where users could endorse or challenge the analysis. Beneath that, automated scoring evaluated factual consistency, logical coherence, and sentiment — turning a passive watch into an auditable report.",
+          "Reef Media's tools would generate a full analytical response: a summary of claims, distilled key points, supplemental context about the content, and an interactive verdict layer where users could endorse or challenge the analysis. Under the hood, a set of specialized models would dissect the content for strengths and weaknesses in logic, argumentation, rhetoric, and factuality.",
       },
       {
         type: "stacked-images",
         images: [reefMediaImages.analysisTop, reefMediaImages.analysisBottom],
         alt: "Reef Media video analysis showing summarization output and fact-check metrics",
         caption:
-          "A complete analysis response — summarization above, scoring metrics below.",
+          "A complete analysis response including summarization and scoring metrics.",
       },
       {
         type: "heading",
@@ -67,14 +72,14 @@ export const ventureArticles: VentureArticle[] = [
       {
         type: "paragraph",
         content:
-          "Not every input was a video. The link analyzer accepted any URL and returned the same structured format: summary, key points, and supplemental context — ready to interrogate before you committed to a take. The input bar anchored a workflow designed for speed: paste, analyze, decide.",
+          "Our machine learning pipeline was versatile enough to support an array of media formats including Truth Social, TikTok, Youtube, and Substack. The analyzer requires just any URL and returned the same structured format: summary, key points, and supplemental context — ready to interrogate before you committed to a take. The input bar anchored a workflow designed for speed: paste, analyze, decide.",
       },
       {
         type: "stacked-images",
         images: [reefMediaImages.analyzerTop, reefMediaImages.analyzerBottom],
         alt: "Reef Media link analyzer showing structured summary output and analysis input",
         caption:
-          "The link analyzer — structured output and the input workflow as one continuous view.",
+          "Above is a structured outline of the summary and key points of an informative Youtube video about recent developments in Ukraine.",
       },
       {
         type: "heading",
@@ -98,12 +103,12 @@ export const ventureArticles: VentureArticle[] = [
       {
         type: "paragraph",
         content:
-          "Reef Media proved that structured AI output — not just generation — is what users actually need when the stakes are high. It also reinforced something I had learned years earlier as a modder: the hardest problems are rarely technical. They are about reducing the distance between what someone wants to create and what their tools allow.",
+          "Building Reef Media taught me a considerable amount about building with cloud services, AI models, and creating robust full stack applicaitons including resilient APIs. Collaborating with Wikimedia Foundation on a case study demonstrated the importance of not just determining build vs buy in a startup setting, but seeking out synergistic strategic partnerships can catapult ventures forward.",
       },
       {
         type: "paragraph",
         content:
-          "That lesson carried directly into Vektre — same philosophy, different bottleneck. Where Reef Media structured information, Vektre structures assets.",
+          "These lessons have fostered better product development skills by recognizing that customer discovery is not the preamble to building products, but an intermittent process that is revisited throughout the MVP's creation.",
       },
     ],
   },
@@ -125,6 +130,11 @@ export const ventureArticles: VentureArticle[] = [
         type: "paragraph",
         content:
           "Vektre exists to remove it. An agentic design system that generates and animates high-fidelity 3D assets at a fraction of traditional cost — so intent becomes playable faster.",
+      },
+      {
+        type: "video",
+        src: "https://youtu.be/iDzmycg_M48",
+        title: "Vektre product walkthrough",
       },
       {
         type: "heading",

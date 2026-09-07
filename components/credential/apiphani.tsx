@@ -1,11 +1,9 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Blurb } from "@/components/blurb"
-import { cn } from "@/lib/utils"
+import { Blurb } from "@/components/blurb";
 
 const APIPHANI_ARTICLE_URL =
-  "https://www.insightpartners.com/ideas/apiphani-raises-25m-series-a-led-by-insight-partners-to-help-redefine-mission-critical-application-management-with-ai/"
+  "https://www.insightpartners.com/ideas/apiphani-raises-25m-series-a-led-by-insight-partners-to-help-redefine-mission-critical-application-management-with-ai/";
 
 function ApiphaniLink({ children }: { children: React.ReactNode }) {
   return (
@@ -13,36 +11,26 @@ function ApiphaniLink({ children }: { children: React.ReactNode }) {
       href={APIPHANI_ARTICLE_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="link-subtle font-medium text-inherit"
+      className="link-subtle font-medium text-inherit not-italic"
       onClick={(event) => event.stopPropagation()}
     >
       {children}
     </a>
-  )
+  );
 }
 
+/** Inline Apiphani name + hover blurb for the credentials row. */
 export function ApiphaniCredential() {
   return (
     <Blurb
       contentClassName="w-96 max-w-[calc(100vw-2rem)] p-5"
       trigger={
-        <span
-          className={cn(
-            "badge-base h-auto min-h-7 px-3 py-1.5 text-xs sm:text-sm",
-            "bg-[#0a0a0a] text-white"
-          )}
+        <button
+          type="button"
+          className="cursor-pointer border-0 bg-transparent p-0 font-inherit text-inherit underline decoration-ink/25 underline-offset-2 transition-colors hover:text-breeze-deep hover:decoration-breeze-deep"
         >
-          <Image
-            src="/work/apiphani.webp"
-            alt=""
-            width={14}
-            height={14}
-            className="size-3.5 shrink-0 rounded-sm object-contain"
-          />
-          <span>
-            Current Position: Software Engineer at <ApiphaniLink>Apiphani</ApiphaniLink>
-          </span>
-        </span>
+          Apiphani
+        </button>
       }
     >
       <p className="type-body text-base leading-relaxed sm:text-lg">
@@ -52,5 +40,5 @@ export function ApiphaniCredential() {
         infrastructure.
       </p>
     </Blurb>
-  )
+  );
 }

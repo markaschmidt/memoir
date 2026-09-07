@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Mark Schmidt">
+  <circle cx="16" cy="16" r="16" fill="#5eb8b2" />
+  <text
+    x="16"
+    y="21"
+    fill="#ffffff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    font-weight="700"
+    text-anchor="middle"
+    direction="rtl"
+    unicode-bidi="bidi-override"
+  >&#x05DE;&#x05E9;</text>
+</svg>

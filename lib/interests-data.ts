@@ -20,14 +20,13 @@ export const interests: Interest[] = [
     title: "Ternary Computing",
     media: {
       type: "image",
-      src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
-      alt: "Close-up of electronic circuit traces and components",
-      credit: "Photo via Unsplash",
+      src: "/interests/peggy-board.webp",
+      alt: "Peggy balanced-ternary prototype PCB with Trion FPGA and modular logic banks",
     },
     lede: "Building toward a tangible case that balanced ternary can outpace primitive binary hardware.",
     body: [
       "Ternary computing is where my hardware fascination turns into an experiment. The claim I want to stress-test is simple: between a primitive binary machine and a primitive balanced-ternary machine — both built by hand — ternary should show a measurable advantage and help push past the comfort of Moore’s-law thinking.",
-      "I pursue this by designing logic, assembling prototypes, and comparing workloads side by side. The work lives in Triumni: schematics, gate experiments, and eventually a shared benchmark suite that makes the theory concrete.",
+      "I pursue this by designing logic, assembling prototypes, and comparing workloads side by side. The work lives in Triumni: schematics, gate experiments, and eventually a shared benchmark suite that makes the theory concrete. Peggy — pictured here — is one of those boards: a modular FPGA testbed for exploring balanced-ternary pathways in silicon.",
     ],
     projects: [{ slug: "triumni" }],
   },
@@ -43,7 +42,7 @@ export const interests: Interest[] = [
     lede: "Reading the long arc of states, trade, and culture that still shapes modern systems.",
     body: [
       "I dig into European and Asian history because institutions, frontiers, and technologies rarely appear from nowhere — they are path-dependent. Understanding how empires, trade routes, and belief systems collided helps me reason about present-day geopolitics and the social systems software touches.",
-      "I pursue it through primary narratives, comparative timelines, and occasional simulation. Agentic Anthropology was one outlet: letting historical factions act under scarcity and conflict made abstract history feel like a living system instead of a static reading list.",
+      "I pursue it through primary narratives, comparative timelines, and occasional simulation. Agentic Anthropology was one outlet: a D&D-style game where a gamemaster agent throws crises at player agents steering civilizations like Rome, who compete over resources, negotiate alliances, and reason through droughts, plagues, and new discoveries.",
     ],
     projects: [{ slug: "agentic-anthropology" }],
   },
@@ -74,9 +73,8 @@ export const interests: Interest[] = [
     },
     lede: "Studying how early humans organized, adapted, and left cultural traces we still inherit.",
     body: [
-      "Prehistory and anthropology keep me honest about what “intelligence” and “society” looked like before writing, markets, or silicon. Material culture, migration, and ritual are older forms of coordination — useful mirrors when designing multi-agent systems that claim to model human behavior.",
-      "I pursue it through archaeology-facing reading and by prototyping simulations of factional decision-making under stress. That thread became Agentic Anthropology: autonomous historical agents, a gamemaster loop, and a chronicle you can watch unfold.",
+      "Prehistory and anthropology keep me honest about what “intelligence” and “society” looked like before writing, markets, or silicon. Material culture, migration, and ritual are older forms of coordination that still inform how I think about groups, incentives, and long time horizons.",
+      "I pursue it through archaeology-facing reading, museum visits when I can, and following how new excavations and dating methods revise the stories we tell about early humans.",
     ],
-    projects: [{ slug: "agentic-anthropology" }],
   },
 ];

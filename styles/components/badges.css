@@ -1,10 +1,14 @@
 @layer components {
   .badge-base {
-    @apply inline-flex h-7 items-center gap-1.5 rounded-full px-3 text-sm font-medium transition-all duration-500;
+    @apply inline-flex h-7 items-center gap-1.5 rounded-sm px-3 text-sm font-medium not-italic transition-all duration-300;
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
   }
 
   .badge-neutral {
-    @apply bg-ink/8 text-ink;
+    @apply bg-ink text-paper-elevated;
   }
 
   .badge-neutral-muted {
@@ -12,6 +16,26 @@
   }
 
   .badge-inverse {
-    @apply bg-ink text-paper-elevated;
+    @apply bg-breeze text-white;
+  }
+
+  .badge-breeze {
+    @apply bg-breeze-soft/70 text-breeze-deep;
+  }
+
+  .credential-row {
+    @apply flex items-start gap-3;
+  }
+
+  .credential-row-icon {
+    @apply mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-sm;
+  }
+
+  .credential-row-label {
+    @apply font-display text-[0.65rem] uppercase not-italic tracking-[0.22em] text-ink-muted;
+  }
+
+  .credential-row-value {
+    @apply mt-1 font-display text-sm font-normal uppercase not-italic tracking-[0.06em] text-ink;
   }
 }

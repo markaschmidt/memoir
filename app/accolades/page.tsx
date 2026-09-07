@@ -1,6 +1,6 @@
 import { FadeIn } from "@/animations/fade-in";
+import { AccoladesSection } from "@/components/accolade";
 import { PageLayout } from "@/components/page";
-import { AccoladeCard } from "@/components/accolade";
 import { AVATARS } from "@/lib/avatars";
 import { accolades } from "@/lib/portfolio-data";
 
@@ -8,18 +8,16 @@ export default function AccoladesPage() {
   return (
     <PageLayout
       title="Accolades"
-      description="Recognition, achievements, and milestones earned through academic and professional pursuits."
+      description="Recognition across academics, Reef Media, hackathons, and other competitions."
       avatar={{
         src: AVATARS.thinking,
         alt: "Mark Schmidt thinking",
       }}
       wide
     >
-      {accolades.map((accolade, index) => (
-        <FadeIn key={accolade.name} delay={180 + index * 140}>
-          <AccoladeCard {...accolade} />
-        </FadeIn>
-      ))}
+      <FadeIn delay={180}>
+        <AccoladesSection accolades={accolades} />
+      </FadeIn>
     </PageLayout>
   );
 }

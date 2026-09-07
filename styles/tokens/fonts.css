@@ -1,0 +1,162 @@
+/* Friends — display / UI */
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-UltraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-Normal.ttf") format("truetype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-UltraBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-UltraBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Friends";
+  src: url("/fonts/friends/Friends-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Witchcraft — body copy uses italic cuts only */
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-light-italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-medium-italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-bold-italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Map normal style requests to italic files so body never falls back to upright/strange glyphs */
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-light-italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-medium-italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-medium-italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("/fonts/witchcraft/alan-meeks-witchcraft-bold-italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

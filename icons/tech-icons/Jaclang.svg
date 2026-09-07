@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Jaclang">
+  <defs>
+    <linearGradient id="jaclang-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F79432" />
+      <stop offset="100%" stop-color="#E5513D" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M 17.1 20.5
+       L 49.8 0
+       L 69.6 13.9
+       L 74.7 17.2
+       L 50.2 66.4
+       L 50.2 40.2
+       L 5.1 66.4
+       L 49.8 100
+       L 82.5 79.5
+       L 95.0 45.1
+       L 91.2 20.5"
+    fill="none"
+    stroke="url(#jaclang-gradient)"
+    stroke-width="11"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

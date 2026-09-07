@@ -5,6 +5,7 @@ type AvatarHeroProps = {
   src: string;
   alt: string;
   className?: string;
+  imageClassName?: string;
   priority?: boolean;
 };
 
@@ -12,12 +13,13 @@ export function AvatarHero({
   src,
   alt,
   className,
+  imageClassName,
   priority = false,
 }: AvatarHeroProps) {
   return (
     <div
       className={cn(
-        "surface-avatar",
+        "surface-avatar relative isolate overflow-hidden",
         "h-[clamp(16rem,45vh,30rem)] sm:h-[clamp(18rem,48vh,32rem)]",
         className
       )}
@@ -27,11 +29,14 @@ export function AvatarHero({
         alt={alt}
         fill
         priority={priority}
-        className="object-contain object-bottom"
+        unoptimized={src.startsWith("/avatars/")}
+        className={cn(
+          "object-contain object-bottom drop-shadow-[0_18px_40px_rgb(14_14_14/0.12)]",
+          imageClassName
+        )}
         sizes="(max-width: 768px) 100vw, 50vw"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-paper/50 via-paper/5 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,oklch(0.99_0.01_92/0.5),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-paper via-paper/30 to-transparent" />
     </div>
   );
 }

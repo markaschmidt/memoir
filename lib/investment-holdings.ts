@@ -197,8 +197,8 @@ export const SAFETY_LABELS: Record<SafetyLevel, string> = {
 export const SAFETY_COLORS: Record<SafetyLevel, string> = {
   conservative: "bg-emerald-100/90 text-emerald-950",
   moderate: "bg-sky-100/90 text-sky-950",
-  balanced: "bg-teal-100/90 text-teal-950",
-  speculative: "bg-amber-100/90 text-amber-950",
+  balanced: "bg-breeze-soft/90 text-breeze-deep",
+  speculative: "bg-breeze/25 text-breeze-deep",
   high_risk: "bg-rose-100/90 text-rose-950",
 };
 

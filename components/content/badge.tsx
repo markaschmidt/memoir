@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ContentBadgeProps } from "@/types/content-badge";
 import { cn } from "@/lib/utils";
 
@@ -48,14 +49,23 @@ export function ContentBadge({
     className
   );
 
-  if (href && !tag) {
+  if (href) {
+    const classNames = cn(styles, "hover:brightness-95");
+    if (href.startsWith("/")) {
+      return (
+        <Link href={href} className={classNames}>
+          {content}
+        </Link>
+      );
+    }
+
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={iconOnly ? label : undefined}
-        className={cn(styles, "hover:brightness-95")}
+        className={classNames}
       >
         {content}
       </a>

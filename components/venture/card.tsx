@@ -20,7 +20,7 @@ export function VentureCard({
     <Card
       className={cn(
         "surface-card group relative cursor-pointer overflow-hidden transition-[transform,box-shadow,border-color] duration-300 ease-out",
-        "hover:-translate-y-1 hover:border-ink/20 hover:shadow-[var(--shadow-soft)]",
+        "hover:-translate-y-0.5 hover:border-ink hover:shadow-[var(--shadow-soft)]",
         className,
       )}
     >
@@ -43,7 +43,7 @@ export function VentureCard({
               <ContentBadge
                 label={category}
                 tag
-                color="bg-amber-100/80 text-amber-950"
+                color="badge-breeze"
               />
             </div>
             <div className="pointer-events-auto">

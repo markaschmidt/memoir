@@ -10,8 +10,8 @@ export default function VenturesPage() {
       title="Ventures"
       description="Below you can find my active and emerging initiatives at the intersection of AI and media."
       avatar={{
-        src: AVATARS.standing,
-        alt: "Mark Schmidt standing",
+        src: AVATARS.ventures,
+        alt: "Mark Schmidt working on a venture",
       }}
       wide
     >

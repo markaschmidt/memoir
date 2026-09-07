@@ -8,6 +8,7 @@ type PageLayoutProps = {
   avatar?: {
     src: string;
     alt: string;
+    imageClassName?: string;
   };
   avatarClassName?: string;
   headerExtra?: React.ReactNode;
@@ -67,9 +68,10 @@ export function PageLayout({
                 src={avatar.src}
                 alt={avatar.alt}
                 priority
+                imageClassName={avatar.imageClassName}
                 className={cn(
                   "mx-auto w-full md:mx-0",
-                  heroBalanced && "md:h-full md:min-h-[22rem]",
+                  heroBalanced && "md:h-full md:min-h-[28rem]",
                   avatarClassName
                 )}
               />

@@ -12,6 +12,12 @@ export type VentureArticleBlock =
       images: readonly string[];
       alt: string;
       caption?: string;
+    }
+  | {
+      type: "video";
+      src: string;
+      title: string;
+      caption?: string;
     };
 
 export type VentureArticle = {

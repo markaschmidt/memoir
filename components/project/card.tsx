@@ -62,7 +62,7 @@ export function ProjectCard({
               />
             </div>
             <div className="min-w-0 pt-2">
-              <CardTitle className="type-card-title">{title}</CardTitle>
+              <CardTitle className="type-project-title">{title}</CardTitle>
               <p className="type-caption-muted mt-1">
                 {formatProjectDateRange(startDate, endDate)}
               </p>

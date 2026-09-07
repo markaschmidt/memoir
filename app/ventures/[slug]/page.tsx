@@ -29,20 +29,21 @@ export default async function VentureDetailPage({ params }: VentureDetailPagePro
     <PageLayout
       title={venture.name}
       description={article.subtitle}
+      wide
       headerExtra={
         <FadeIn delay={120}>
           <div className="flex flex-wrap items-center gap-3">
             <ContentBadge
               label={venture.category}
               tag
-              color="bg-amber-100/80 text-amber-950"
+              color="badge-breeze"
             />
             <ContentBadge
               label={venture.status === "current" ? "Current venture" : "Past venture"}
               tag
               color={
                 venture.status === "current"
-                  ? "bg-teal-100/80 text-teal-950"
+                  ? "bg-breeze/25 text-breeze-deep"
                   : "bg-stone-200/80 text-stone-900"
               }
             />

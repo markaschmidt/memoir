@@ -1,5 +1,8 @@
-export {
-  AccoladeCard,
-  type AccoladeProps,
-  type AccoladeMediaLink,
-} from "./card";
+export { AccoladeSquareCard } from "./square-card";
+export { AccoladesSection } from "./section";
+export type {
+  AccoladeProps,
+  AccoladeMediaLink,
+  AccoladeCategory,
+  AccoladeProjectLink,
+} from "@/types/accolade";

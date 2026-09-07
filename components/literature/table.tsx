@@ -24,8 +24,8 @@ type LiteratureTableProps = {
 type SortDirection = "asc" | "desc";
 
 const CLASSIFICATION_COLORS: Record<string, string> = {
-  Fiction: "bg-indigo-100/80 text-indigo-950",
-  "Non-Fiction": "bg-teal-100/80 text-teal-950",
+  Fiction: "bg-ink/8 text-ink",
+  "Non-Fiction": "bg-breeze-soft/80 text-breeze-deep",
 };
 
 export function LiteratureTable({

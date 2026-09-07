@@ -1,7 +1,9 @@
 export type { ContentBadgeProps } from "./content-badge";
 export type {
   AccoladeMediaLink,
+  AccoladeProjectLink,
   AccoladeProps,
+  AccoladeCategory,
 } from "./accolade";
 export type {
   Interest,

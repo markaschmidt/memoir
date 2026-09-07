@@ -10,7 +10,7 @@ export function StatsStrip({ stats }: StatsStripProps) {
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-2xl border border-ink/10 bg-paper-elevated/80 px-4 py-3"
+          className="rounded-sm border border-ink/10 bg-paper-elevated/80 px-4 py-3"
         >
           <dt className="type-caption-muted">{stat.label}</dt>
           <dd className="type-card-title-sm mt-1 tabular-nums">{stat.value}</dd>

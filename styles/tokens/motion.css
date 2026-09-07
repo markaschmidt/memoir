@@ -5,6 +5,6 @@
   --duration-medium: 0.45s;
   --duration-panel: 0.55s;
   --duration-reveal: 1.6s;
-  --shadow-soft: 0 24px 60px oklch(0.35 0.03 60 / 0.08);
-  --shadow-social: 0 4px 14px oklch(0.35 0.03 60 / 0.08);
+  --shadow-soft: 0 18px 40px rgb(14 14 14 / 0.08);
+  --shadow-social: 0 4px 12px rgb(14 14 14 / 0.1);
 }

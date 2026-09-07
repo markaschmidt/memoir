@@ -48,7 +48,7 @@ export default async function InvestmentsPage() {
         />
       </FadeIn>
 
-      <FadeIn delay={260}>
+      <FadeIn delay={240}>
         <InvestmentHoldingsTable
           title="ETFs"
           description="These thematic ETFs have performed well for me in the past, and I believe will continue to have strong returns."
@@ -57,15 +57,13 @@ export default async function InvestmentsPage() {
         />
       </FadeIn>
 
-      <FadeIn delay={340}>
-        <div className="rounded-2xl border border-ink/10 bg-paper-elevated/80 p-6 md:p-8">
-          <h2 className="font-serif text-xl font-medium text-ink">
-            Data source
-          </h2>
-          <p className="mt-3 font-serif text-sm leading-relaxed text-ink-muted">
+      <FadeIn delay={300}>
+        <div className="rounded-sm border border-ink/10 bg-paper-elevated/80 p-6 md:p-8">
+          <h2 className="font-display text-xl font-medium text-ink">Data source</h2>
+          <p className="mt-3 font-body text-sm leading-relaxed text-ink-muted">
             Nothing on this page constitutes financial advice. Daily performance
-            badges use publicly accessible Yahoo Finance chart data refreshed
-            every 5 minutes. No API key is required. Safety ratings, themes, and
+            badges use publicly accessible Yahoo Finance chart data refreshed every
+            5 minutes. No API key is required. Safety ratings, themes, and
             explanations are manually curated.
           </p>
         </div>

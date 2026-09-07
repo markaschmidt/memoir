@@ -12,18 +12,23 @@ function normalizeTechName(name: string): TechIconKey | null {
   if (normalized.includes("fastapi")) return "fastapi";
   if (normalized.includes("python")) return "python";
   if (normalized.includes("react")) return "react";
+  if (normalized.includes("reefmedia")) return "reefmedia";
   if (normalized.includes("rust")) return "rust";
   if (normalized.includes("nodejs") || normalized.includes("node.js")) {
     return "nodejs";
   }
   if (normalized.includes("tauri")) return "tauri";
   if (normalized.includes("docker")) return "docker";
+  if (normalized.includes("expo")) return "expo";
   if (normalized.includes("redis")) return "redis";
   if (normalized.includes("cloudflare")) return "cloudflare";
+  if (normalized.includes("gemini")) return "gemini";
   if (normalized.includes("googlecloud") || normalized.includes("gcp")) {
     return "googlecloud";
   }
   if (normalized.includes("firebase")) return "firebase";
+  if (normalized.includes("html5")) return "html5";
+  if (normalized.includes("jaclang")) return "jaclang";
   if (normalized.includes("vue.js") || normalized.includes("vuejs")) {
     return "vuejs";
   }

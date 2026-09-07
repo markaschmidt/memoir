@@ -1,6 +1,6 @@
 @layer components {
   .surface-card {
-    @apply border-ink/10 bg-paper-elevated/80 shadow-none;
+    @apply border border-ink/15 bg-paper-elevated shadow-none;
   }
 
   .surface-card-interactive {
@@ -8,39 +8,42 @@
   }
 
   .surface-panel {
-    @apply overflow-hidden rounded-2xl border border-ink/10 bg-paper-elevated/80;
+    @apply overflow-hidden rounded-sm border border-ink/15 bg-paper-elevated;
   }
 
   .surface-media {
-    @apply overflow-hidden rounded-2xl border border-ink/10 bg-ink/5;
+    @apply overflow-hidden rounded-sm border border-ink/15 bg-ink/5;
   }
 
   .surface-muted {
-    @apply border-ink/10 bg-paper/50;
+    @apply border-ink/12 bg-paper/70;
   }
 
   .surface-nav {
-    @apply sticky top-0 z-50 border-b border-ink/8 bg-paper/85 backdrop-blur-md;
+    @apply sticky top-0 z-50 border-b border-ink/10 bg-paper-elevated/90 backdrop-blur-md;
   }
 
   .surface-logo-lg {
-    @apply relative size-14 shrink-0 overflow-hidden rounded-2xl border border-ink/10 bg-paper;
+    @apply relative size-14 shrink-0 overflow-hidden rounded-sm border border-ink/15 bg-paper;
   }
 
   .surface-logo-md {
-    @apply relative size-12 shrink-0 overflow-hidden rounded-xl border border-ink/10 bg-paper;
+    @apply relative size-12 shrink-0 overflow-hidden rounded-sm border border-ink/15 bg-paper;
   }
 
   .surface-gallery-thumb {
-    @apply relative h-36 w-52 shrink-0 overflow-hidden rounded-xl border border-ink/10;
+    @apply relative h-36 w-52 shrink-0 overflow-hidden rounded-sm border border-ink/15;
   }
 
   .surface-avatar {
-    @apply relative w-full overflow-hidden rounded-[2rem] border border-ink/10 bg-paper-elevated/60;
-    box-shadow: var(--shadow-soft);
+    @apply relative w-full overflow-visible;
   }
 
   .surface-book-cover {
-    @apply relative h-16 w-11 shrink-0 overflow-hidden rounded-md border border-ink/10 bg-ink/5;
+    @apply relative h-16 w-11 shrink-0 overflow-hidden rounded-sm border border-ink/15 bg-ink/5;
+  }
+
+  .surface-prose-block {
+    @apply rounded-sm border border-ink/10 border-l-4 border-l-breeze bg-ink px-6 py-8 md:px-10 md:py-10;
   }
 }

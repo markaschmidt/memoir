@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Google Gemini">
+  <defs>
+    <linearGradient id="gemini-gradient" x1="8" y1="8" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F6C015" />
+      <stop offset="22%" stop-color="#EA4335" />
+      <stop offset="48%" stop-color="#C13D8A" />
+      <stop offset="72%" stop-color="#4285F4" />
+      <stop offset="100%" stop-color="#34A853" />
+    </linearGradient>
+  </defs>
+  <path
+    fill="url(#gemini-gradient)"
+    d="M64 10
+       C64 10 64 46 18 64
+       C64 82 64 118 64 118
+       C64 118 64 82 110 64
+       C64 46 64 10 64 10Z"
+  />
+</svg>

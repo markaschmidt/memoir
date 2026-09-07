@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Spatium">
+  <rect width="120" height="120" fill="#B8D4C8" />
+  <path fill="#93B5A6" d="M28 88 L92 52 L92 88 Z" />
+  <rect x="24" y="34" width="72" height="44" rx="10" fill="#ECECEC" />
+  <rect x="20" y="46" width="8" height="16" rx="2" fill="#4A4A4A" />
+  <rect x="92" y="46" width="8" height="16" rx="2" fill="#4A4A4A" />
+  <rect x="54" y="28" width="12" height="8" rx="2" fill="#4A4A4A" />
+  <path
+    fill="#2D3436"
+    d="M34 40 H86 V68 C86 74 80 78 74 78 H46 C40 78 34 74 34 68 Z"
+  />
+  <path fill="#B8D4C8" d="M52 68 C52 64 56 62 60 62 C64 62 68 64 68 68 H52 Z" />
+</svg>

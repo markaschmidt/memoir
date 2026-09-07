@@ -22,9 +22,9 @@ export function ProjectsNavMenu() {
       <DropdownMenuPrimitive.Trigger asChild>
         <Button
           variant="ghost"
-          size="sm"
+          size="xs"
           className={cn(
-            "nav-link type-nav-link gap-1",
+            "nav-link type-nav-link gap-1 px-2",
             active && "nav-link-active"
           )}
           aria-haspopup="menu"
@@ -38,13 +38,13 @@ export function ProjectsNavMenu() {
         <DropdownMenuPrimitive.Content
           align="start"
           sideOffset={6}
-          className="z-50 min-w-44 rounded-2xl border border-ink/10 bg-popover p-1 text-popover-foreground shadow-none ring-1 ring-foreground/5 outline-none data-[side=bottom]:slide-in-from-top-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95"
+          className="z-50 min-w-44 rounded-sm border border-ink/10 bg-popover p-1 text-popover-foreground shadow-none ring-1 ring-foreground/5 outline-none data-[side=bottom]:slide-in-from-top-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95"
         >
           {PROJECT_LINKS.map((link) => (
             <DropdownMenuPrimitive.Item
               key={link.href}
               className={cn(
-                "type-nav-link relative flex cursor-pointer select-none items-center rounded-xl px-3 py-2 outline-none transition-colors hover:bg-ink/6 focus:bg-ink/6",
+                "type-nav-link relative flex cursor-pointer select-none items-center rounded-sm px-3 py-2 outline-none transition-colors hover:bg-ink/6 focus:bg-ink/6",
                 pathname === link.href && "bg-ink/6 text-ink"
               )}
               asChild

@@ -41,7 +41,7 @@ export const READING_LIST: Book[] = [
     categoryColor: "bg-sky-100/80 text-sky-950",
     genre: "Geopolitics & AI",
     value:
-      "Argues that the West must renew the partnership between technology and government to compete in the age of AI.",
+      "Argues that the West must renew the partnership between technology and government to compete in the age of AI. To preserve the values of the West, the West must be strong and willing to defend its values in face of adversity both domestic and foreign.",
     classification: "Non-Fiction",
   }),
   book({
@@ -60,10 +60,10 @@ export const READING_LIST: Book[] = [
     href: "https://www.amazon.com/Courage-Be-Disliked-Phenomenon-Happiness/dp/1501197274",
     author: "Ichiro Kishimi & Fumitake Koga",
     category: "Philosophy",
-    categoryColor: "bg-violet-100/80 text-violet-950",
+    categoryColor: "bg-ink/8 text-ink",
     genre: "Adlerian Psychology",
     value:
-      "Reframes happiness as a choice rooted in responsibility rather than past trauma or external approval.",
+      "Reframes happiness as a choice rooted in responsibility rather than past trauma or external approval. Happiness is a state that must be nurtured and conditioned, rather than something we receive from the world.",
     classification: "Non-Fiction",
   }),
   book({
@@ -93,7 +93,7 @@ export const READING_LIST: Book[] = [
     href: "https://www.amazon.com/Rome-History-Sackings-Matthew-Kneale/dp/1501191098",
     author: "Matthew Kneale",
     category: "History",
-    categoryColor: "bg-amber-100/80 text-amber-950",
+    categoryColor: "bg-breeze-soft/80 text-breeze-deep",
     genre: "Urban History",
     value:
       "Uses seven invasions of Rome to show how catastrophe and renewal shaped one of history's most enduring cities.",
@@ -110,7 +110,7 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-emerald-100/80 text-emerald-950",
     genre: "Startup Strategy",
     value:
-      "A contrarian framework for how to build companies that matter and develop yourself as an individual that can develop desirable talents and expertise.",
+      "A contrarian framework for how to build companies that matter and develop yourself as an individual that can develop desirable talents and expertise to become a competitive and exceptional founder. Thiel is a brilliant entrepreneurial thinker and his insights are timeless.",
   }),
   book({
     title: "The Hard Thing About Hard Things",
@@ -137,17 +137,17 @@ export const FAVORITE_READS: Book[] = [
     href: "https://www.amazon.com/Almanack-Naval-Ravikant-Eric-Jorgenson/dp/1544514212",
     author: "Eric Jorgenson",
     category: "Philosophy",
-    categoryColor: "bg-violet-100/80 text-violet-950",
+    categoryColor: "bg-ink/8 text-ink",
     genre: "Wealth & Wisdom",
     value:
-      "Distills practical mental models for building leverage, judgment, and a meaningful life.",
+      "Distills practical mental models for building leverage, judgment, and a meaningful life. The soft skills and discipline needed to succeed, especially as a founder.",
   }),
   book({
     title: "On Grand Strategy",
     href: "https://www.amazon.com/Grand-Strategy-John-Lewis-Gaddis/dp/014311158X",
     author: "John Lewis Gaddis",
     category: "Strategy",
-    categoryColor: "bg-amber-100/80 text-amber-950",
+    categoryColor: "bg-breeze-soft/80 text-breeze-deep",
     genre: "Grand Strategy",
     value:
       "Explores how leaders balance ambition with limits across history's most consequential decisions.",
@@ -160,14 +160,14 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-sky-100/80 text-sky-950",
     genre: "Future Trends",
     value:
-      "Maps the sectors reshaping the global economy, from robotics to genomics to cybersecurity. While it's old, I found it incredibly salient and relevant to today.",
+      "Maps the sectors reshaping the global economy, from robotics to genomics to cybersecurity. While it's old, I found it incredibly salient and relevant to today. Russia has virtually grinded to a hault, bogged down by an overcommitment to a losing war against a modernizing Ukraine.",
   }),
   book({
     title: "Ikigai",
     href: "https://www.amazon.com/Ikigai-Japanese-Secret-Long-Happy/dp/1526420896",
     author: "Héctor García & Francesc Miralles",
     category: "Philosophy",
-    categoryColor: "bg-violet-100/80 text-violet-950",
+    categoryColor: "bg-ink/8 text-ink",
     genre: "Longevity & Purpose",
     value:
       "Examines Okinawan longevity and the habits that sustain purpose, community, and daily meaning. Great for developing a calm psyche for founders.",
@@ -180,7 +180,7 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-rose-100/80 text-rose-950",
     genre: "Faith & Public Life",
     value:
-      "A personal reflection on belief, service, and moral responsibility from a life in public leadership. A really admirable personal reflection on his life in politics, before, and after.",
+      "A personal reflection on belief, service, and moral responsibility from a life in public leadership. A really admirable personal reflection on his life in politics, before, and his accomplishments afterwards.",
   }),
   book({
     title: "Power and Prediction",
@@ -190,7 +190,7 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-sky-100/80 text-sky-950",
     genre: "AI Economics",
     value:
-      "Frames AI as a drop in the cost of prediction and explains how that reshapes business strategy.",
+      "Frames AI as a drop in the cost of prediction and explains how that reshapes business strategy from shifting from rules to decisions, emphasizing AI's value is not in point, or even segment solutions, but system solutions.",
   }),
   book({
     title: "The World: A Brief Introduction",
@@ -200,7 +200,7 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-stone-200/80 text-stone-900",
     genre: "International Relations",
     value:
-      "A concise primer on the forces, institutions, and fault lines shaping global affairs today.",
+      "A concise primer on the forces, institutions, and fault lines shaping global affairs today. A fascinating perspective is synthesized by combining history of the 17th century and an industrializing Europe, cleverly sewing it into valuable insights that inform how today's geopolitical paradigm arose.",
   }),
   book({
     title: "The Metaverse",
@@ -210,6 +210,6 @@ export const FAVORITE_READS: Book[] = [
     categoryColor: "bg-sky-100/80 text-sky-950",
     genre: "Virtual Worlds",
     value:
-      "Defines the infrastructure and economics of the metaverse and what it will take to build it.",
+      "An extrospective and comprehensive outlook on how digital entertainment evolved, what the Metaverse could offer, the path toward reaching the Metaverse, and the challenges that lie ahead. It spans the technological innovation, the companies who are orchestrating and hindering the Metaverse's inception, and how other technologies like Blockchain may bolster VR's value. ",
   }),
 ];

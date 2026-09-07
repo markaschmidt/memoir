@@ -15,6 +15,95 @@ export const MARK_DISCORD = "ardenid";
 
 export const projects: ProjectProps[] = [
   {
+    slug: "spatium",
+    title: "Spatium",
+    description:
+      "A VR-native development studio where full app and website flows render as spatial panes around you — and a companion agent turns voice commands and hand gestures into live code changes, so building software feels like sculpting in space instead of fighting a flat screen.",
+    githubUrl: "https://github.com/markaschmidt/spatium",
+    logo: "/projects/spatium.svg",
+    startDate: "2026-07-01",
+    status: {
+      milestones: [
+        {
+          label: "OpenXR runtime and headset compatibility",
+          status: "pending",
+          details:
+            "Validate target headsets, establish an OpenXR abstraction layer, and set frame-rate, latency, and comfort budgets before building on top of the stack.",
+        },
+        {
+          label: "Spatial workspace and pane layout system",
+          status: "pending",
+          details:
+            "Design the 3D scene graph, pane anchoring, and layout rules that render full app and website flows as manipulable surfaces in the VR environment.",
+        },
+        {
+          label: "Hand tracking and gesture command pipeline",
+          status: "pending",
+          details:
+            "Wire hand pose, pinch, grab, and haptic gesture recognition into a reliable intent layer that maps physical motion to editor actions.",
+        },
+        {
+          label: "Vocal Bridge companion agent integration",
+          status: "pending",
+          details:
+            "Connect voice input through Vocal Bridge so spoken commands are parsed, confirmed, and routed to the same action model as hand gestures.",
+        },
+        {
+          label: "Live flow renderer for spatial panes",
+          status: "pending",
+          details:
+            "Embed and hot-reload app and website flows inside VR panes with synchronized navigation, component state, and preview fidelity.",
+        },
+        {
+          label: "Agent orchestration and code-change loop",
+          status: "pending",
+          details:
+            "Bridge voice and haptic intents through Jaclang and NestJS services into file edits, builds, and redeploys with audit trails.",
+        },
+        {
+          label: "Cloud backend and real-time session sync",
+          status: "pending",
+          details:
+            "Stand up Firebase-backed persistence, NestJS APIs, and WebSocket channels for multi-pane state, auth, and collaborative sessions.",
+        },
+        {
+          label: "On-device performance and comfort validation",
+          status: "pending",
+          details:
+            "Profile motion-to-photon latency, thermal limits, and interaction ergonomics on real hardware before wider rollout.",
+        },
+      ],
+    },
+    skills: [
+      { name: "Spatial computing", category: "VR" },
+      { name: "Voice-first agent design", category: "Agents" },
+      { name: "Immersive UX", category: "Frontend" },
+      { name: "Full-stack workflow automation", category: "Product" },
+    ],
+    techStack: [
+      { name: "OpenXR", category: "VR Platform", notes: "Cross-headset runtime layer" },
+      { name: "Meta Quest SDK", category: "VR Hardware", notes: "Primary target headset" },
+      { name: "React Three Fiber", category: "Spatial UI", notes: "3D pane rendering" },
+      { name: "Three.js", category: "Graphics", notes: "Scene graph and WebGL" },
+      { name: "WebXR", category: "VR Platform", notes: "Browser and runtime bridge" },
+      { name: "Vocal Bridge", category: "Voice AI", notes: "Companion agent input" },
+      { name: "Google Gemini", category: "AI", notes: "Intent parsing and codegen" },
+      { name: "Jaclang", category: "Backend", notes: "Core services and tooling APIs" },
+      { name: "NestJS", category: "Backend", notes: "API gateway and orchestration" },
+      { name: "Google Cloud", category: "Cloud", notes: "Compute and managed services" },
+      { name: "Firebase", category: "Database", notes: "Auth, sessions, and realtime data" },
+      { name: "TypeScript", category: "Language", notes: "Shared client and server types" },
+      { name: "WebSockets", category: "Realtime", notes: "Live pane and agent sync" },
+      { name: "Redis", category: "Cache", notes: "Session state and command queues" },
+      { name: "Docker", category: "DevOps", notes: "Service packaging and deployment" },
+    ],
+    tags: [
+      { label: "VR", tag: true, color: "bg-violet-100/80 text-violet-950" },
+      { label: "Agents", tag: true, color: "bg-sky-100/80 text-sky-950" },
+      { label: "Spatial Computing", tag: true, color: "bg-breeze-soft/80 text-breeze-deep" },
+    ],
+  },
+  {
     slug: "triumni",
     title: "Triumni",
     description:
@@ -129,7 +218,7 @@ export const projects: ProjectProps[] = [
     ],
     tags: [
       { label: "Systems", tag: true, color: "bg-stone-200/80 text-stone-900" },
-      { label: "Hardware", tag: true, color: "bg-amber-100/80 text-amber-950" },
+      { label: "Hardware", tag: true, color: "bg-breeze-soft/80 text-breeze-deep" },
     ],
   },
   {
@@ -188,7 +277,7 @@ export const projects: ProjectProps[] = [
     ],
     tags: [
       { label: "Agentic Content Creation", tag: true, color: "bg-sky-100/80 text-sky-950" },
-      { label: "AI x Digital Media", tag: true, color: "bg-violet-100/80 text-violet-950" },
+      { label: "AI x Digital Media", tag: true, color: "bg-ink/8 text-ink" },
     ],
   },
   {
@@ -239,13 +328,13 @@ export const projects: ProjectProps[] = [
       { name: "Reef Media API", category: "Backend", notes: "Media verification" },
     ],
     tags: [
-      { label: "AI x Digital Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-      { label: "Trust & Safety", tag: true, color: "bg-teal-100/80 text-teal-950" },
+      { label: "AI x Digital Media", tag: true, color: "bg-breeze-soft/80 text-breeze-deep" },
+      { label: "Trust & Safety", tag: true, color: "bg-breeze/20 text-breeze-deep" },
     ],
   },
   {
     slug: "reef-terminal",
-    title: "Reef Terminal",
+    title: "Reef Enterprise Trust Automation Platform",
     description:
       "First-place Hack in Paradise project built solo in Miami. An enterprise platform for affordably managing misinformation mitigation — case triage, bad-actor investigation, and AI-assisted enforcement — designed to pair with Reef Media's consumer-facing media analyzer.",
     githubUrl: "https://github.com/markaschmidt/Reef-Terminal",
@@ -284,7 +373,7 @@ export const projects: ProjectProps[] = [
       {
         type: "paragraph",
         content:
-          "Reef Terminal is the enterprise counterpart to Reef Media's consumer media analyzer. Trust & Safety teams use it to investigate flagged misinformation, assess bad-actor threat profiles, and apply graduated enforcement — from content advisories and fact-check labels through reach reduction, monetisation suspension, and bans.",
+          "Reef Enterprise Trust Automation Platform is the enterprise counterpart to Reef Media's consumer media analyzer. Trust & Safety teams use it to investigate flagged misinformation, assess bad-actor threat profiles, and apply graduated enforcement — from content advisories and fact-check labels through reach reduction, monetisation suspension, and bans.",
       },
       {
         type: "paragraph",
@@ -304,18 +393,18 @@ export const projects: ProjectProps[] = [
       {
         label: "Hackathon Winner",
         tag: true,
-        color: "bg-amber-100/80 text-amber-950",
+        color: "bg-breeze-soft/80 text-breeze-deep",
         icon: <TrophyIcon className="size-3.5" />,
       },
-      { label: "Trust & Safety", tag: true, color: "bg-teal-100/80 text-teal-950" },
-      { label: "AI x Digital Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
+      { label: "Trust & Safety", tag: true, color: "bg-breeze/20 text-breeze-deep" },
+      { label: "AI x Digital Media", tag: true, color: "bg-breeze-soft/80 text-breeze-deep" },
     ],
   },
   {
     slug: "agentic-anthropology",
     title: "Agentic Anthropology",
     description:
-      "Winner of the Betaworks hackathon, built solo in a matter of hours. A multi-user dungeon in Tribute Labs's Intent Spaces where several AI agents play a D&D-style campaign guided by a gamemaster agent. — autonomous historical factions, world events, and intent-space-native orchestration via Spacebase.",
+      "Winner of the Betaworks hackathon, built solo in a matter of hours. A D&D-style multi-agent game where a gamemaster agent presents scenarios — droughts, plagues, new discoveries, and more — and player agents each control an ancient civilization like Rome, competing for resources, forming alliances, and reasoning through whatever crisis comes next.",
     githubUrl: "https://github.com/markaschmidt/Betaworks-Intent-Space",
     logo: "/projects/agentic-anthropology.svg",
     startDate: "2025-05-21",
@@ -352,25 +441,25 @@ export const projects: ProjectProps[] = [
       {
         type: "paragraph",
         content:
-          "Agentic Anthropology simulates five competing historical civilizations under stress from scarcity, unrest, plague, climate, and warfare. Faction agents act autonomously, a gamemaster agent introduces dilemmas, and every major world event is posted as a nested Spacebase intent — making the simulation observable and auditable in real time.",
+          "Agentic Anthropology is a gamemaster-led civilization game, not an anthropology project — the name just sounded clever. A gamemaster agent sets the scene with events like droughts, plagues, and discoveries. Player agents each steer a historical civilization such as Rome, competing for resources, negotiating alliances, and posting moves as the world state shifts.",
       },
       {
         type: "paragraph",
         content:
-          "Built for the Betaworks Intent Space hackathon, the project won competing solo. The demo runs as a local dashboard where you can watch factions move, adjudicate dilemmas, and trace the full chronicle of agent decisions.",
+          "Built solo for the Betaworks Intent Space hackathon and won against the field. The demo runs as a local dashboard where you can watch factions move, see the gamemaster introduce dilemmas, and trace the full chronicle of agent decisions via Spacebase intents.",
       },
     ],
     techStack: [
       { name: "Python", category: "Backend", notes: "Simulation server" },
       { name: "Spacebase1", category: "Agents", notes: "Intent-space orchestration" },
       { name: "JavaScript", category: "Frontend", notes: "Live dashboard" },
-      { name: "HTML/CSS", category: "UI", notes: "Campaign chronicle" },
+      { name: "HTML5", category: "UI", notes: "Campaign chronicle" },
     ],
     tags: [
       {
         label: "Hackathon Winner",
         tag: true,
-        color: "bg-amber-100/80 text-amber-950",
+        color: "bg-breeze-soft/80 text-breeze-deep",
         icon: <TrophyIcon className="size-3.5" />,
       },
       { label: "Role-Playing Games", tag: true, color: "bg-sky-100/80 text-sky-950" },
@@ -391,7 +480,7 @@ export const projects: ProjectProps[] = [
           label: "Mobile-first UI",
           status: "completed",
           details:
-            "Core portfolio views and responsive Next.js app shell are implemented.",
+            "Core portfolio views and responsive Expo app shell are implemented.",
         },
         {
           label: "Agentic API layer",
@@ -419,7 +508,7 @@ export const projects: ProjectProps[] = [
       { name: "Mobile-first UI", category: "Frontend" },
     ],
     techStack: [
-      { name: "Next.js", category: "Frontend", notes: "App Router UI" },
+      { name: "Expo", category: "Frontend", notes: "Mobile app shell" },
       { name: "FastAPI", category: "Backend", notes: "Agentic API layer" },
       { name: "Python", category: "Backend", notes: "Data and agent flows" },
       { name: "TypeScript", category: "Language", notes: "Shared client types" },
@@ -447,8 +536,8 @@ export const ventures: VentureProps[] = [
     period: "Oct. 2024 — May 2026",
     status: "past",
     tags: [
-      { label: "Media Analysis", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-      { label: "Trust & Safety Automation", tag: true, color: "bg-teal-100/80 text-teal-950" },
+      { label: "Media Analysis", tag: true, color: "bg-breeze-soft/80 text-breeze-deep" },
+      { label: "Trust & Safety Automation", tag: true, color: "bg-breeze/20 text-breeze-deep" },
     ],
   },
   {
@@ -462,8 +551,8 @@ export const ventures: VentureProps[] = [
     period: "June 2026 — present",
     status: "current",
     tags: [
-      { label: "Game Dev", tag: true, color: "bg-indigo-100/80 text-indigo-950" },
-      { label: "Synthesis", tag: true, color: "bg-violet-100/80 text-violet-950" },
+      { label: "Game Dev", tag: true, color: "bg-ink/8 text-ink" },
+      { label: "Synthesis", tag: true, color: "bg-ink/8 text-ink" },
     ],
   },
 ];
@@ -474,56 +563,38 @@ export const venturesBySlug = Object.fromEntries(
 
 export const accolades: AccoladeProps[] = [
   {
-    iconSrc: "/accolades/njit.svg",
-    name: "NJIT New Business Model Competition Finalist",
+    iconSrc: "/accolades/tribute-labs.svg",
+    name: "Tribute Labs Multi-Agent Hackathon",
     description:
-      "Competed against over 80 applicants and was among the top 9 finalists who were mostly graduate and PhD students.",
-    location: "Newark, New Jersey",
-    year: "December 2023",
-    tags: [
-      { label: "Pitch Competition", tag: true, color: "bg-stone-200/80 text-stone-900" },
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-    ],
-  },
-  {
-    iconSrc: "/accolades/EO.webp",
-    name: "NJ GSEA Top Student Entrepreneur & Finalist",
-    description:
-      "Recognized by the NJ chapter of Entrepreneur's Organization as a top student entrepreneur during the 2024-2025 academic year and was a finalist in the NJ GSEA pitch competition.",
-    location: "New Jersey",
-    year: "January 2025",
-    tags: [
-      { label: "Pitch Competition", tag: true, color: "bg-stone-200/80 text-stone-900" },
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-    ],
+      "In four hours, Mark Schmidt built a civilization. Five AI agents. Five societies. Competing for resources, responding to drought and disease, adapting to each other in real time. No orchestrator. No script. Just agents deciding what mattered to them and acting on it. A gamemaster agent would introduce scenarios like new discoveries, natural disasters, war, and political strife. The agents would then make their own decisions on how to act and interact amongst each other.",
+    location: "Betaworks",
+    year: "April 2026",
+    category: "hackathons",
     mediaLinks: [
       {
-        label: "Press Release",
-        href: "https://www.prlog.org/13062010-rutgers-university-student-wins-new-jerseys-top-student-entrepreneur-in-eos-global-student-entrepreneur-awards.html",
+        label: "Tribute Labs",
+        href: "https://www.linkedin.com/posts/tributelabs_in-four-hours-mark-schmidt-built-a-civilization-activity-7457859211713236992-cgyu?utm_source=share&utm_medium=member_desktop&rcm=ACoAADILLeABaMJ1sVUuTnfUqum1fkHutsc8H40",
       },
     ],
   },
   {
-    iconSrc: "/accolades/rutgers.webp",
-    name: "Scarlet Pitch Competition Finalist",
+    iconSrc: "/accolades/founders-inc.svg",
+    name: "Nighthack III by Founders Inc.",
     description:
-      "Selected among dozens of applicants as one of the top 10.",
-    location: "Rutgers University",
-    year: "February 2025",
-    tags: [
-      { label: "Pitch Competition", tag: true, color: "bg-stone-200/80 text-stone-900" },
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-    ],
+      "Top 7 finalist among 128 submissions and 460 participants. I placed in the top 7 after just arriving in San Francisco a day prior.",
+    location: "San Francisco",
+    category: "hackathons",
+    videoUrl: "https://youtu.be/_lXNvzoeOcQ",
   },
   {
-    iconSrc: "/accolades/tcu.webp",
-    name: "TCU Values & Ventures International Pitch Competition Semi-Finalist",
-    location: "Fort Worth, Texas",
-    year: "April 2025",
-    tags: [
-      { label: "Pitch Competition", tag: true, color: "bg-stone-200/80 text-stone-900" },
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-    ],
+    iconSrc: "/accolades/hack-in-paradise.svg",
+    name: "The Foundry x Velric Hack in Paradise",
+    description:
+      "A weekend in Miami building Reef Terminal, an enterprise desk for misinformation casework.",
+    location: "Miami, FL",
+    year: "February 2025",
+    category: "hackathons",
+    videoUrl: "https://youtu.be/E8iSGJTHhyQ",
   },
   {
     iconSrc: "/accolades/wiki.webp",
@@ -531,15 +602,17 @@ export const accolades: AccoladeProps[] = [
     description:
       "Collaborated with Wikimedia Foundation on a case study to establish a corpus for media claim verification.",
     location: "Wikimedia Enterprise",
-    year: 2025,
-    tags: [
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-      { label: "Research", tag: true, color: "bg-teal-100/80 text-teal-950" },
-    ],
+    year: "January 2026",
+    category: "reef-media",
+    tags: [{ label: "Research", tag: true, color: "bg-breeze/20 text-breeze-deep" }],
     mediaLinks: [
       {
         label: "Case Study",
         href: "https://enterprise.wikimedia.com/blog/reef-media-ai/",
+      },
+      {
+        label: "TechCrunch",
+        href: "https://techcrunch.com/2026/01/15/wikimedia-foundation-announces-new-ai-partnerships-with-amazon-meta-microsoft-perplexity-and-others/",
       },
     ],
   },
@@ -550,9 +623,71 @@ export const accolades: AccoladeProps[] = [
       "Launched Reef Media as a Discord integrated app across 15 communities with a collective ~26K members and ~300 individual users actively using the product.",
     location: "Discord",
     year: 2025,
-    tags: [
-      { label: "Reef Media", tag: true, color: "bg-cyan-100/80 text-cyan-950" },
-      { label: "Product Launch", tag: true, color: "bg-teal-100/80 text-teal-950" },
+    category: "reef-media",
+    tags: [{ label: "Product Launch", tag: true, color: "bg-breeze/20 text-breeze-deep" }],
+  },
+  {
+    iconSrc: "/accolades/tcu.webp",
+    name: "TCU Values & Ventures Semi-Finalist",
+    location: "Fort Worth, Texas",
+    year: "April 2025",
+    category: "other",
+    projectLink: {
+      label: "Reef Media",
+      href: "/projects/reef-media-browser-extension",
+    },
+  },
+  {
+    iconSrc: "/accolades/rutgers.webp",
+    name: "Scarlet Pitch Competition Finalist",
+    location: "Rutgers University",
+    year: "February 2025",
+    category: "other",
+    projectLink: {
+      label: "Reef Media",
+      href: "/projects/reef-media-browser-extension",
+    },
+  },
+  {
+    iconSrc: "/accolades/EO.webp",
+    name: "NJ GSEA Top Student Entrepreneur & Finalist",
+    location: "New Jersey",
+    year: "January 2025",
+    category: "other",
+    projectLink: {
+      label: "Reef Media",
+      href: "/projects/reef-media-browser-extension",
+    },
+    mediaLinks: [
+      {
+        label: "Press Release",
+        href: "https://www.prlog.org/13062010-rutgers-university-student-wins-new-jerseys-top-student-entrepreneur-in-eos-global-student-entrepreneur-awards.html",
+      },
     ],
+  },
+  {
+    iconSrc: "/accolades/dke.svg",
+    name: "Delta Kappa Epsilon Bryan Scholarship",
+    location: "Deke Foundation",
+    year: 2024,
+    category: "academic",
+    tags: [{ label: "Scholarship", tag: true, color: "bg-stone-200/80 text-stone-900" }],
+    mediaLinks: [
+      {
+        label: "Deke Foundation",
+        href: "https://www.dekefoundation.org/foundation-scholarships",
+      },
+    ],
+  },
+  {
+    iconSrc: "/accolades/njit.svg",
+    name: "NJIT New Business Model Competition Finalist",
+    location: "Newark, New Jersey",
+    year: "December 2023",
+    category: "other",
+    projectLink: {
+      label: "Reef Media",
+      href: "/projects/reef-media-browser-extension",
+    },
   },
 ];

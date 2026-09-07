@@ -124,11 +124,10 @@ export function InterestCarousel({
       <div className="space-y-2">
         <p className="type-eyebrow">Interests</p>
         <h2 id={labelId} className="type-section-title">
-          What else I chase
+          Other Pursuits & Interests
         </h2>
         <p className="type-section-desc max-w-2xl">
-          Each slide is a short field note — what draws me in, how I work at it,
-          and any projects that grew out of the curiosity.
+          Below are some of the other fields and subjects that captivate my attention. These are mostly hobbyist pursuits.
         </p>
       </div>
 
@@ -149,7 +148,7 @@ export function InterestCarousel({
               id={`interest-tab-${interest.id}`}
               onClick={() => goTo(interestIndex)}
               className={cn(
-                "shrink-0 rounded-full border px-3.5 py-1.5 font-serif text-sm transition-colors duration-300",
+                "shrink-0 rounded-sm border px-3.5 py-1.5 font-body text-sm transition-colors duration-300",
                 selected
                   ? "border-ink/25 bg-ink text-paper-elevated"
                   : "border-ink/10 bg-paper/40 text-ink-muted hover:border-ink/20 hover:text-ink"
@@ -179,7 +178,7 @@ export function InterestCarousel({
           <div className="relative aspect-[16/9] overflow-hidden border-b border-ink/10 bg-ink/5">
             <InterestMediaFrame media={active.media} />
             {active.media.type === "image" && active.media.credit ? (
-              <span className="absolute bottom-3 right-3 rounded-md bg-paper/80 px-2 py-1 font-serif text-xs text-ink-muted backdrop-blur-sm">
+              <span className="absolute bottom-3 right-3 rounded-md bg-paper/80 px-2 py-1 font-body text-xs text-ink-muted backdrop-blur-sm">
                 {active.media.credit}
               </span>
             ) : null}
@@ -191,7 +190,7 @@ export function InterestCarousel({
               <p className="type-caption max-w-3xl">{active.lede}</p>
             </header>
 
-            <div className="space-y-4 font-serif text-lg leading-relaxed text-ink-muted">
+            <div className="space-y-4 font-body text-lg leading-relaxed text-ink-muted">
               {active.body.map((paragraph) => (
                 <p key={paragraph.slice(0, 48)}>{paragraph}</p>
               ))}
@@ -209,7 +208,7 @@ export function InterestCarousel({
                       <li key={projectLink.slug}>
                         <Link
                           href={projectSectionHref(projectLink.slug)}
-                          className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-paper/50 px-3.5 py-2 font-serif text-sm text-ink transition-colors duration-300 hover:border-ink/25 hover:bg-paper"
+                          className="inline-flex items-center gap-2 rounded-sm border border-ink/10 bg-paper/50 px-3.5 py-2 font-body text-sm text-ink transition-colors duration-300 hover:border-ink/25 hover:bg-paper"
                         >
                           <span>{project.title}</span>
                           <span aria-hidden="true" className="text-ink/35">
@@ -233,7 +232,7 @@ export function InterestCarousel({
           size="icon"
           aria-label="Previous interest"
           onClick={() => go(-1)}
-          className="rounded-full border-ink/15 bg-paper/50"
+          className="rounded-sm border-ink/15 bg-paper/50"
         >
           <HugeiconsIcon icon={ArrowLeft01Icon} strokeWidth={2} />
         </Button>
@@ -261,7 +260,7 @@ export function InterestCarousel({
           size="icon"
           aria-label="Next interest"
           onClick={() => go(1)}
-          className="rounded-full border-ink/15 bg-paper/50"
+          className="rounded-sm border-ink/15 bg-paper/50"
         >
           <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} />
         </Button>
@@ -270,7 +269,6 @@ export function InterestCarousel({
       <p className="type-caption-muted text-center md:text-left">
         {index + 1} of {count}
         <span className="mx-2 text-ink/20">·</span>
-        Topic chips, arrows, or ← → when this section is focused
       </p>
     </section>
   );

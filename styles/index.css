@@ -6,6 +6,7 @@
 
 @import "../animations/index.css";
 
+@import "./tokens/fonts.css";
 @import "./tokens/theme.css";
 @import "./tokens/motion.css";
 @import "./base/base.css";

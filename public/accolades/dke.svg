@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Delta Kappa Epsilon">
+  <defs>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a6e"/>
+      <stop offset="100%" stop-color="#0f2447"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M60 8 L104 28 L104 62 C104 86 84 102 60 112 C36 102 16 86 16 62 L16 28 Z"
+    fill="url(#shield)"
+    stroke="#c9a227"
+    stroke-width="3"
+  />
+  <path
+    d="M60 18 L94 34 L94 62 C94 82 78 96 60 104 C42 96 26 82 26 62 L26 34 Z"
+    fill="none"
+    stroke="#8b1a1a"
+    stroke-width="2"
+    opacity="0.85"
+  />
+  <text
+    x="60"
+    y="72"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="34"
+    font-weight="700"
+    fill="#f4e4b8"
+    letter-spacing="2"
+  >���</text>
+</svg>

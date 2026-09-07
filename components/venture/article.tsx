@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { YoutubeEmbed } from "@/components/content";
 import type { VentureArticleBlock } from "@/types/venture-article";
 import { StackedScreenshots } from "./stacked-screenshots";
 
@@ -50,6 +51,17 @@ export function VentureArticle({ blocks }: VentureArticleProps) {
                 alt={block.alt}
                 caption={block.caption}
               />
+            );
+          case "video":
+            return (
+              <figure key={index} className="space-y-3">
+                <YoutubeEmbed src={block.src} title={block.title} />
+                {block.caption ? (
+                  <figcaption className="type-caption-muted text-center">
+                    {block.caption}
+                  </figcaption>
+                ) : null}
+              </figure>
             );
           default:
             return null;

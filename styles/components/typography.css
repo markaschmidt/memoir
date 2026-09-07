@@ -1,62 +1,70 @@
 @layer components {
   .type-display {
-    @apply font-serif text-5xl font-medium tracking-tight text-ink md:text-6xl;
+    @apply font-display text-5xl font-normal uppercase not-italic tracking-[-0.04em] text-ink md:text-7xl;
   }
 
   .type-section-title {
-    @apply font-serif text-3xl font-medium tracking-tight text-ink;
+    @apply font-display text-3xl font-normal uppercase not-italic tracking-[-0.03em] text-ink;
   }
 
   .type-card-title {
-    @apply font-serif text-2xl font-medium text-ink;
+    @apply font-display text-2xl font-normal not-italic tracking-[-0.02em] text-ink;
+  }
+
+  .type-project-title {
+    @apply font-display text-3xl font-normal not-italic tracking-[-0.03em] text-ink md:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
   }
 
   .type-card-title-sm {
-    @apply font-serif text-xl font-medium text-ink;
+    @apply font-display text-xl font-normal not-italic tracking-[-0.02em] text-ink;
   }
 
   .type-body {
-    @apply font-serif text-lg leading-relaxed text-ink-muted;
+    @apply font-body text-lg font-normal italic leading-relaxed text-ink-muted;
+  }
+
+  .type-body-inverted {
+    @apply font-body text-lg font-normal italic leading-relaxed text-paper/90;
   }
 
   .type-section-desc {
-    @apply font-serif text-base leading-relaxed text-ink-muted;
+    @apply font-body text-base font-normal italic leading-relaxed text-ink-muted;
   }
 
   .type-caption {
-    @apply font-serif text-base text-ink-muted;
+    @apply font-body text-base font-normal italic text-ink-muted;
   }
 
   .type-caption-muted {
-    @apply font-serif text-sm text-ink-muted/80;
+    @apply font-body text-sm font-normal italic text-ink-muted/80;
   }
 
   .type-eyebrow {
-    @apply font-serif text-sm uppercase tracking-[0.18em] text-ink-muted/80;
+    @apply font-display text-xs uppercase not-italic tracking-[0.28em] text-ink-muted;
   }
 
   .type-nav-label {
-    @apply font-serif text-xs font-medium uppercase tracking-[0.22em] text-ink-muted/80;
+    @apply font-display text-[0.65rem] font-normal uppercase not-italic tracking-[0.28em] text-ink-muted;
   }
 
   .type-brand {
-    @apply font-serif text-3xl font-medium tracking-tight text-ink transition-colors duration-300 hover:text-ink-muted;
+    @apply font-display whitespace-nowrap text-xl font-normal uppercase not-italic tracking-[0.06em] text-ink transition-colors duration-300 hover:text-breeze-deep sm:text-2xl;
   }
 
   .type-table-emphasis {
-    @apply font-serif text-base font-medium text-ink;
+    @apply font-body text-base font-medium italic text-ink;
   }
 
   .type-table-cell {
-    @apply font-serif text-base text-ink-muted;
+    @apply font-body text-base font-normal italic text-ink-muted;
   }
 
   .type-table-body {
-    @apply font-serif text-base leading-relaxed text-ink-muted;
+    @apply font-body text-base font-normal italic leading-relaxed text-ink-muted;
   }
 
   .type-sort-header {
-    @apply cursor-pointer font-serif text-left text-base font-medium text-ink-muted transition-colors hover:text-ink;
+    @apply cursor-pointer font-body text-left text-base font-medium italic text-ink-muted transition-colors hover:text-ink;
   }
 
   .type-sort-header-active {
@@ -64,11 +72,11 @@
   }
 
   .type-action {
-    @apply font-serif text-base text-ink/75 transition-colors duration-300 hover:text-ink;
+    @apply font-body text-base font-normal italic text-ink/80 transition-colors duration-300 hover:text-ink;
   }
 
   .link-subtle {
-    @apply underline-offset-2 transition-colors hover:text-ink/80 hover:underline;
+    @apply underline-offset-2 transition-colors hover:text-breeze-deep hover:underline;
   }
 
   .divider-subtle {
@@ -80,14 +88,19 @@
   }
 
   .type-nav-link {
-    @apply font-serif text-lg font-normal tracking-wide text-ink/85;
+    @apply font-display whitespace-nowrap text-xs font-normal uppercase not-italic tracking-[0.12em] text-ink/85;
   }
 
   .type-fallback-label {
-    @apply font-serif text-xs leading-tight text-ink-muted;
+    @apply font-body text-xs font-normal italic leading-tight text-ink-muted;
   }
 
   .type-label {
-    @apply font-serif text-base text-ink;
+    @apply font-body text-base font-normal italic text-ink;
+  }
+
+  .brand-mark {
+    @apply inline-flex size-11 shrink-0 items-center justify-center bg-breeze text-[1.45rem] font-black not-italic leading-none tracking-normal text-white;
+    font-family: var(--font-display);
   }
 }

@@ -80,7 +80,7 @@ export function ProjectSortFilter({
 
       <ExpandablePanel open={open}>
         <div
-          className="mt-2 overflow-hidden rounded-2xl border border-ink/10 bg-paper-elevated/80"
+          className="mt-2 overflow-hidden rounded-sm border border-ink/10 bg-paper-elevated/80"
           role="listbox"
           aria-label="Sort projects"
         >

@@ -7,9 +7,9 @@ export function TrophyIcon({ className, ...props }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
       aria-hidden="true"
       className={cn("size-4", className)}
       {...props}

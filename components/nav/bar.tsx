@@ -15,12 +15,15 @@ import {
 import { MARK_DISCORD, MARK_EMAIL } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
 
-const NAV_LINKS = [
+const NAV_LINKS_BEFORE_PROJECTS = [
   { label: "About", href: "/about" },
   { label: "Ventures", href: "/ventures" },
+] as const;
+
+const NAV_LINKS_AFTER_PROJECTS = [
   { label: "Accolades", href: "/accolades" },
   { label: "Literature", href: "/literature" },
-  { label: "Investments", href: "/investments" },
+  // { label: "Investments", href: "/investments" },
 ] as const;
 
 const SOCIAL_LINKS = [
@@ -81,44 +84,75 @@ function copyDiscord() {
   );
 }
 
+function NavLinkButton({
+  href,
+  label,
+  pathname,
+}: {
+  href: string;
+  label: string;
+  pathname: string;
+}) {
+  return (
+    <Button
+      variant="ghost"
+      size="xs"
+      className={cn(
+        "nav-link type-nav-link px-2",
+        pathname === href && "nav-link-active"
+      )}
+      asChild
+    >
+      <Link href={href}>{label}</Link>
+    </Button>
+  );
+}
+
 export function NavBar() {
   const pathname = usePathname();
 
   return (
     <header className="surface-nav animate-nav-enter">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-5 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-4 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:items-center xl:gap-6">
         <Link
           href="/about"
-          className="group type-brand"
+          className="group inline-flex items-center gap-3 type-brand xl:justify-self-start"
         >
-          Mark Schmidt
-          <span className="mt-1 block h-px w-0 bg-ink/30 transition-all duration-500 ease-out group-hover:w-full" />
+          <span className="brand-mark" aria-hidden="true">
+            מש
+          </span>
+          <span className="relative whitespace-nowrap">
+            Mark Schmidt
+            <span className="absolute -bottom-1 left-0 block h-px w-0 bg-ink transition-all duration-500 ease-out group-hover:w-full" />
+          </span>
         </Link>
 
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:gap-8 xl:gap-10">
-          <NavSection title="Navigation">
-            <nav
-              aria-label="Primary"
-              className="flex flex-wrap items-center gap-0.5 sm:gap-1"
-            >
-              <ProjectsNavMenu />
-              {NAV_LINKS.map((link) => (
-                <Button
-                  key={link.href}
-                  variant="ghost"
-                  size="sm"
-                  className={cn(
-                    "nav-link type-nav-link",
-                    pathname === link.href && "nav-link-active"
-                  )}
-                  asChild
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </Button>
-              ))}
-            </nav>
-          </NavSection>
+        <NavSection title="Navigation" className="xl:justify-self-center">
+          <nav
+            aria-label="Primary"
+            className="flex flex-nowrap items-center gap-0.5"
+          >
+            {NAV_LINKS_BEFORE_PROJECTS.map((link) => (
+              <NavLinkButton
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                pathname={pathname}
+              />
+            ))}
+            <ProjectsNavMenu />
+            {NAV_LINKS_AFTER_PROJECTS.map((link) => (
+              <NavLinkButton
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                pathname={pathname}
+              />
+            ))}
+          </nav>
+        </NavSection>
 
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:gap-6 xl:items-center xl:justify-self-end xl:justify-end xl:gap-8">
           <NavSection title="Contact">
             <div className="flex items-center gap-1">
               <Button

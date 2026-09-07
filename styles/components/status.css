@@ -13,7 +13,7 @@
   }
 
   .milestone-status-in-progress {
-    @apply bg-amber-100/90 text-amber-950;
+    @apply bg-breeze-soft/90 text-breeze-deep;
   }
 
   .milestone-status-pending {
